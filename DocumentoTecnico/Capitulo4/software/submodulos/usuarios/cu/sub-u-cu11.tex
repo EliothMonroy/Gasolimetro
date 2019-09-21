@@ -1,0 +1,82 @@
+\subsubsection{SUB-U-CU11-Editar automóvil}\label{SUB-U-CU11}
+El Cliente que tenga automóviles registrados puede editar la información de los mismo, así como asociarlo a un sensor en especifico en caso de tener al menos uno registrado.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU11-Editar automóvil \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente editar un automóvil. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere editar un automóvil. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Nombre del automóvil.
+				\item Modelo del automóvil.
+				\item Marca del automóvil.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & Mensaje de éxito.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & El actor tiene registrado al menos un automóvil.
+		\\ \hline
+	\textbf{Postcondiciones} & La información del automóvil es actualizada.
+		% \begin{itemize}
+		% 	\item El actor puede verificar su cuenta.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra el mensaje de éxito al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} &  \ref{RN11}.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona el botón \textit{Editar} de un automóvil.
+		\item {[Sistema]} Obtiene la información del automóvil seleccionado.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu11]{SUB-U-IU11-Editar automóvil}.
+		\item \label{SUB-U-CU11:Ingresar} {[Actor]} Ingresa la información solicitada por la pantalla.
+		\item {[Actor]} Presiona el botón \textit{Confirmar}.
+		\item {[Sistema]} Verifica que la información ingresada por el actor sea válida, según lo indicado por la regla de negocio \ref{RN11}.\hyperref[SUB-U-CU11:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Persiste la información ingresada.
+		\item {[Sistema]} Muestra un mensaje de éxito indicando al actor que la acción fue realizada exitosamente.
+		\item \label{SUB-U-CU11:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu12]{SUB-U-IU12-Consultar automóvil}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU11:TA}
+	La información ingresada por el actor no es válida.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra al actor un mensaje indicando que la información ingresada no es válida.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU11:Ingresar} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

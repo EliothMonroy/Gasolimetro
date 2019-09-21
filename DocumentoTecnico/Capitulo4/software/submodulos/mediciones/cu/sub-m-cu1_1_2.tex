@@ -1,0 +1,57 @@
+\subsubsection{SUB-M-CU1.1.2-Registrar precio gasolina}\label{SUB-M-CU1.1.2}
+Un actor con insignias, puede registrar el precio del litro de gasolina después de haber cargado en una gasolinera de acuerdo con la regla de negocio \ref{RN4}.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-M-CU1.1.2-Registrar precio gasolina \\ \hline
+	\textbf{Objetivo} &
+		Permitir al actor ingresar el precio del litro de gasolina \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor presiona el icono correspondiente \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Precio por litro.
+		\end{itemize}\\ \hline
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Mensaje de éxito
+		\end{itemize} \\ \hline
+	\textbf{Precondiciones} &
+		El actor debe tener la insignia requerida.\\ \hline
+	\textbf{Postcondiciones} &
+		\begin{itemize}
+			\item El precio puede ser consultado en la información de la gasolinera.
+		\end{itemize} \\ \hline
+	\textbf{Condiciones de término} & 
+		\begin{itemize}
+			\item Se registra el precio.
+		\end{itemize} \\ \hline 
+	\textbf{Prioridad} & 
+		Media. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & \ref{RN4}.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona el icono \textit{Registrar precio} de la pantalla \hyperref[fig:sub-m-iu1.1.2.a]{SUB-M-IU1.1.2-Registrar precio gasolina (a)}
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-m-iu1.1.2.b]{SUB-M-IU1.1.2-Registrar precio gasolina (b)}.
+		\item {[Actor]} Ingresa la información solicitada por la pantalla.
+		\item {[Actor]} Presiona el botón \textit{Registrar}.
+		\item {[Sistema]} Persiste los datos ingresados por el usuario.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.

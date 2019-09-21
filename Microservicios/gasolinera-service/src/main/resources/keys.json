@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gasolimetromx",
+  "private_key_id": "d5c9a134a05c00429f638bdbf443411ed5121dc0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCIwv49KlUIx1Dc\n3MgB1fj5mhuJSJI1tPBil2W7HCQ8ixoBjw3Mko3b9YDUFx6VPODAZxazgS73a+Nl\nxrXxBUieLgrBacDyJXlrWh+GiW8XVJmbWKJQFDB8aloQKWN6ZqW8eNCgJTRoIWAB\nTYf7E42/79y3Crw82z5i9jPJmA5g+DT7BrUjf/p6LsPSUwKpOZzKTH4N7trP53Vp\n53pzRdmFtdb6SZO3qV3MMUitJCt+RYmgVi2ipobgXIgG4S4YJlxTGk3ZXl9kT3T4\nfn1nvyJDen6svmmc8x569YH3YVeWDDoHd8iw3pSozJzx1LXhLScC+rl+S6j9R5K7\nB0BL4dt5AgMBAAECggEAC0HVsI4z+qmBX/SyZ+hHerAzNQ0qr84JfWwN3SV3XB5t\nERTH439quuDN7mdKxqkArQWvSi5Hgek5Cg8duc2gCRksHHiKf8QS5wG/l5Dneoml\nrTJSBfprdUpByJPHkvMxED73mT8Gvc2FfAX4O/QDlnl1dwGktfOsAnRWlfD0ugmF\nbPhXekpg+7VGjbt5Pz13K+LBF2/i4nuCjBVI9V5G63XBXUZWLdiK6kfkh4EZLYgb\n4rReZrLNL5yS2Mn+vnnHJojK0SxcMf0VBbvtxNlI1AvRoPxgtPlhI8ui44eaQPFF\noP0st/QU7Ghs46jjAIeqnNywKe1VDUWReND8IKdwWwKBgQDBTFFgX/rsMLutEriv\noik+icw1vm2zkFJdiXiZ49J8/26kZCosUkyPXJDGi/pXwqoPKstNnrte+kqgZVkQ\nv+qZcJbXy6q4Ii0swz2lAqvtImWJQXMgGnoeUvyXNhV5azgZ6WvKBJVUHFfCO8Zb\nJBupynYFybXwXbN5uUF3NpPy4wKBgQC1H9SDEwPSIfRAP4S7ojXcxql5obj+UvMH\nzvo0jLwGtpp9ouD0Tp7mXLOF+nUJKW4XQwOGuWE1HoerD2xHv2zG7W5Zs0pIu9It\nHphyzXmh4dD+ZcPjAyUR2U0kZ+n0BL6BiBiVn6YOxKCkUqWcqJVKawVOSXo4uaZV\nNcMtln/a8wKBgFOBPMZ9sFDI3MrwA4kcbOTvcqDlG08vUeXGtasFmLEXSB0MiIuN\nIjXsrz6WyhePqRfUTO/DWv608fhI0ClEP3z5/rBK8/2IBiwITGE0vkE7UtHwzGNa\nDNd80lIgszY484t+I2qqgDhN5juqxw4okyrOpB3r/gVQ9W/ocDeoBFIxAoGAExr9\nbqoV0BeWzSQmGyi8J8Ko49SkT+duDVfO2rYxqz+dwjzpH7wfVMtYgHxv1fyRyVBf\nUdnCIDlNNEUXNeZCUiV/a2TXJB7zx6CfkhSMjP/l7L/NTufpBB343is76WqKsd0q\nQrYpbQteqpaxM3ow7T2mvKBRjSRAIGLgaLGkYPMCgYB0+ke66+qaUBgqzmxUpZBJ\nwpPseB9HuD2/VYRJ4fZm7OetXNPr3Dg9b2c8Fhd9Q8vyyN0DJty7zlsRPqnoQMMX\nkkD2n2HPQs0ECMySxTLt2EDRibRmJP3reexyM0mUqTgiwIMpP9bO2GaekFKEb8pd\n75/DagZ0kCjbEkA+UFqf8w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gasolimetromx@appspot.gserviceaccount.com",
+  "client_id": "116090753753223836710",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gasolimetromx%40appspot.gserviceaccount.com"
+}

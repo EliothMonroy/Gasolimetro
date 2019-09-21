@@ -1,0 +1,8 @@
+Nearby places
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=19.504507,-99.146911&radius=500&types=gas_station&key=AIzaSyCMVYdg2QXkcYcVdnIMd-cOybc1DbBzeJE
+
+Info place
+https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJzz89naj50YURXUjX0-d_6hk&fields=geometry,formatted_address&key=AIzaSyCMVYdg2QXkcYcVdnIMd-cOybc1DbBzeJE
+
+Distance matrix
+https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&language=es-419&origins=19.504507,-99.146911&destinations=19.50213,-99.14932&key=AIzaSyCMVYdg2QXkcYcVdnIMd-cOybc1DbBzeJE

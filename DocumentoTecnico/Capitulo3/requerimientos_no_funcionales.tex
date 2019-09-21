@@ -1,0 +1,10 @@
+\section{Requerimientos no funcionales}\label{RequerimientosNF}
+A continuación, se presenta un listado con los requerimientos no funcionales que fueron identificados para el sistema:
+\begin{enumerate}[label=RNF\arabic*.]
+	\item Escalabilidad: La arquitectura bajo la que es construido el sistema permite que este sea escalable y pueda extenderse hacia más usuarios y más funcionalidades.
+	\item Seguridad: Todos los usuarios que se registren deberán de activar sus cuentas vía correo electrónico.
+	\item Usabilidad: La interfaz de usuario del sistema es intuitiva de tal forma que un usuario pueda usar las funcionalidades descritas en los requerimientos funcionales, sin entrenamiento previo en no más de dos horas.
+	\item Tiempo de ejecución: Cuando se envíe una petición al servidor para mostrar la información de la clasificación de las gasolineras este debe responder en un tiempo máximo de 5 segundos.
+	\item Tolerancia a fallos: Cuando se presente un error en el sistema, este no tardará más de 5 minutos en restaurarse a un estado válido.
+	\item Concurrencia: El sistema debe soportar 1000 peticiones sin que el tiempo de respuesta para todas ellas sea mayor a 10 segundos.
+\end{enumerate}

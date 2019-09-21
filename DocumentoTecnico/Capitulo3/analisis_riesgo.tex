@@ -1,0 +1,51 @@
+\section{Análisis de riesgos}
+El análisis de los riesgos del presente Trabajo Terminal, nos permite identificar cuales son los factores de riesgo, que potencialmente tienen un impacto negativo en el mismo. Por lo cual, es necesario prestar atención a estos. Una vez identificados y clasificados los riesgos, es posible realizar un análisis de los mismos, con la finalidad de encontrar soluciones u métodos que nos permitan solventar los mismos \cite{RIESGO}, en la Tabla \ref{tabla_riesgos} se muestra un listado de los mismos.\\
+\begin{longtable}{|M{3cm}|M{2cm}|M{3.8cm}|M{5.5cm}|}
+	% \centering
+	% \begin{tabular}
+	\hline
+	\textbf{Área de impacto} & \textbf{Nivel de impacto} & \textbf{Causas} & \textbf{Métodos para contrarrestar el riesgo} \\ \hline
+	Modificación de los requerimientos funcionales & Alto & No haber contemplado dentro del análisis funcionalidades importantes. & Evaluar al termino de cada incremento, si los resultados obtenidos van acorde con lo definido en los requerimientos funcionales y los objetivos. \\ \hline
+	Atraso en fechas de entrega & Alto & 
+	No tener listas las actividades especificadas en los cronogramas.
+	& Evaluar al termino de cada mes, si se cumplieron las actividades esperadas y en caso negativo, analizar el porque y justificarlo en el anexo correspondiente (\ref{anexo:atraso}). \\ \hline
+	Hardware & Alto &
+	\begin{itemize}
+		\item Sensor de flujo defectuoso o no adecuado.
+		\item Incompatibilidad del sensor con el microcontrolador.
+		\item Fallas en la comunicación inalámbrica entre el microcontrolador y el dispositivo móvil.
+		\item Dispositivo móvil sin capacidades de conexión inalámbrica.
+		\item Cortos circuitos.
+		\item Batería que alimenta el circuito del sensor descargada.
+	\end{itemize} &
+	\begin{itemize}
+		\item Realizar una comparación de diversos sensores para posteriormente realizar pruebas con alguno de ellos, y verificar así su funcionalidad.
+		\item Elegir el microcontrolador a partir del sensor seleccionado y no de forma inversa.
+		\item Seleccionar un dispositivo de comunicación inalámbrica adecuado para el microcontrolador seleccionado y realizar pruebas de comunicación.
+		\item Notificar al usuario que para poder usar la aplicación es necesario que tenga un dispositivo móvil el cual cumpla con ciertas condiciones de hardware y software.
+		\item Realizar extensivas pruebas para verificar que el diseño del sensor evite cortos circuitos.
+		\item Realizar una implementación de hardware la cual permita recargar la batería que alimenta el circuito.
+	\end{itemize} \\ \hline
+	Software & Medio &
+	\begin{itemize}
+		\item Software que no permite la escalabilidad.
+		\item Uso de tecnología obsoletas o que estén próximas a quedar obsoletas.
+	\end{itemize} &
+	\begin{itemize}
+		\item Usar una arquitectura que permita que el sistema sea escalable.
+		\item Seleccionar una tecnología que sea un estándar en la industria.
+	\end{itemize} \\ \hline
+	Reputación y confianza del usuario & Alto &
+	\begin{itemize}
+		\item Desconfianza de que la información mostrada en la aplicación sea errónea.
+		\item Producto que no funcione de la manera esperada.
+	\end{itemize} &
+	\begin{itemize}
+		\item Realizar mediciones precisas bajo el margen establecido en la norma NOM-005-SCFI-2011\cite{NORMA-005}.
+		\item Probar continuamente los diversos incrementos que se realizan sobre el equipo de hardware y el software.
+	\end{itemize}
+	\\ \hline
+	% \end{tabular}
+	\caption{Análisis de Riesgos}
+	\label{tabla_riesgos}
+\end{longtable}

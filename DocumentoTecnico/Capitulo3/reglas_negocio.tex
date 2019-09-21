@@ -1,0 +1,107 @@
+\section{Reglas de negocio}
+En la presente sección, se muestran las reglas de negocio del sistema.
+\begin{enumerate}[label=RN\arabic*.]
+	\item \label{RN1}
+		\begin{description}
+			\item[Nombre] RN1-Calcular cantidad de combustible recargado.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] La cantidad de combustible recargado a un automóvil se calcula con una fórmula especifica dependiente del sensor de hardware usado.
+			\item[Descripción] La cantidad de combustible recargado a un automóvil, se calcula con la fórmula: $$L=(F/4.8)*T$$
+			Donde:
+				\begin{itemize}
+					\item L=Total de litros recargados
+					\item F=Frecuencia de la señal (tren de impulsos) enviada por el sensor de hardware, se calcula por la cantidad de impulsos (voltaje en alta) que se reciban en un segundo.
+					\item T= Es el tiempo durante el que se recibió la señal, el tiempo se calcula al establecer una marca de tiempo en la cual se recibió el primer impulso, y establecer otra marca de tiempo en el momento en que se han dejado de recibir. Restando al segundo el primero.\cite{FS400A-G1}
+				\end{itemize}
+			% \item[Ejemplo]
+		\end{description}
+
+	\item \label{RN2}
+		\begin{description}
+			\item[Nombre] RN2-Tiempo posterior a la carga de combustible.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Especificar la cantidad de tiempo, en la que pasado este se considera que la recarga de combustible en el automóvil haya culminado.
+			\item[Descripción] Se considera que se ha dejado de cargar gasolina a un automóvil sí ha pasado más de diez segundos sin recibir una trama con un valor distinto a cero.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN3}
+		\begin{description}
+			\item[Nombre] RN3-Otorgar insignia a actor.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] Determinar las condiciones bajo las cuales un actor recibe una insignia.
+			\item[Descripción] Un actor recibe una insignia cada vez que acumula cien mediciones.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN4}
+		\begin{description}
+			\item[Nombre] RN4-Registrar precio gasolina.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Determinar que actores pueden registrar el precio de la gasolina después de haber cargado.
+			\item[Descripción] Solamente un actor con insignias puede registrar el precio de la gasolina.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN5}
+		\begin{description}
+			\item[Nombre] RN5-Asignar insignia a gasolinera.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Determinar que actores pueden asignarle una insignia a una gasolinera.
+			\item[Descripción] Solamente un actor con insignias puede asignarle insignias a una gasolinera después de carga gasolina en la misma.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN6}
+		\begin{description}
+			\item[Nombre] RN6-Especificar bomba.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Determinar que actores pueden especificar en que bomba cargaron gasolina.
+			\item[Descripción] Solamente un actor con al menos una insignia puede especificar en que bomba cargó gasolina.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN7}
+		\begin{description}
+			\item[Nombre] RN7-Actualizar clasificación de gasolineras.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Determinar el tiempo que debe pasar entre cada actualización de la clasificación de gasolineras.
+			\item[Descripción] La clasificación de gasolineras se actualiza cada veinticuatro horas.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN8}
+		\begin{description}
+			\item[Nombre] RN8-Radio cercano al actor para obtener gasolineras.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] Especificar en que radio se obtendrán las gasolineras cercanas al actor al abrir la aplicación móvil.
+			\item[Descripción] El radio es de quinientos metros a partir de la ubicación del actor.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN9}
+		\begin{description}
+			\item[Nombre] RN9-Iconos de gasolineras.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] Especificar que tipo de icono se mostrará según el tipo de gasolinera obtenida.
+			\item[Descripción] Las gasolineras registradas en el sistema se mostrarán de color negro con un tamaño de 24 pixeles. Las gasolineras que únicamente se encuentren en el API de Google Maps se mostrarán de color rojo en un tamaño de 12 pixeles.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN10}
+		\begin{description}
+			\item[Nombre] RN10-Verificar cuenta de usuario.
+			\item[Tipo] Controladora.
+			\item[Objetivo] Controlar las acciones que puede realizar un usuario sin una cuenta verificada.
+			\item[Descripción] Un usuario que aún no haya verificado su cuenta, puede realizar las mismas acciones que un usuario no registrado, hasta que verifique su cuenta.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN11}
+		\begin{description}
+			\item[Nombre] RN11-Consistencia de información.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] Verificar que la información ingresada por un usuario sea válida respecto a lo establecido en la presente regla de negocio.
+			\item[Descripción] La información ingresada por un usuario en un formulario, no puede ser igual a la cadena vacía ``'', a excepción de que sea un campo no obligatorio.
+			% \item[Ejemplo]
+		\end{description}
+	\item \label{RN12}
+		\begin{description}
+			\item[Nombre] RN12-Cuenta no verificada.
+			\item[Tipo] Derivadora.
+			\item[Objetivo] Verificar que un usuario al iniciar sesión tenga su cuenta activa.
+			\item[Descripción] Un usuario no puede autenticarse en el sistema en caso de que no tenga una cuenta activa, por lo cual deberá ser notificado para que verifique su cuenta, así como tampoco puede solicitar recuperar su contraseña.
+			% \item[Ejemplo]
+		\end{description}
+\end{enumerate}

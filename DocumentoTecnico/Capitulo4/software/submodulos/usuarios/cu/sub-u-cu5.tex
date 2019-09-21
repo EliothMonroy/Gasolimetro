@@ -1,0 +1,87 @@
+\subsubsection{SUB-U-CU5-Autenticar usuario}\label{SUB-U-CU5}
+Un actor puede autenticarse en el sistema para así registrar automóviles, sensores u editar su información.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU5-Autenticar usuario \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente acceder a su cuenta para que pueda realizar acciones sobre la misma. \\ \hline
+	\textbf{Actores} &
+		Usuario no registrado. \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere autenticarse en el sistema. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Correo electrónico.
+				\item Contraseña.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & Ninguna.
+		% \begin{itemize}
+		% 	\item Cantidad de gasolina que debió ser cargada al automóvil.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		El actor requiere tener una cuenta activa en el sistema.\\ \hline
+	\textbf{Postcondiciones} &
+		\begin{itemize}
+			\item El actor puede gestionar sus automóviles.
+			\item El actor puede gestionar sus sensores.
+			\item El actor puede gestionar su información.
+			\item El actor puede reportar errores.
+		\end{itemize} \\ \hline
+	\textbf{Condiciones de término} & Se muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}
+		% \begin{itemize}
+		% 	\item El Cliente ingresa la cantidad de combustible que debió ser cargada.
+		% 	\item Se realiza persistencia de la información calculada e ingresada.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Media. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & 
+		\begin{itemize}
+			\item \ref{RN11}.
+			\item \ref{RN12}.
+		\end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Iniciar sesión} del menú \hyperref[fig:menu-usuario]{Menú para Usuario no registrado}.
+		\item  {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu5]{SUB-U-IU5-Autenticar usuario}.
+		\item \label{SUB-U-CU5:Ingresar} {[Actor]} Ingresa la información solicitada por la pantalla.
+		\item \label{SUB-U-CU5:PresionaBoton} {[Actor]} Presiona el botón \textit{Iniciar sesión}.
+		\item {[Sistema]} Verifica que la información ingresada por el actor sea válida, según lo indicado por la regla de negocio \ref{RN11}.\hyperref[SUB-U-CU5:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Verifica que la información ingresada corresponda a la de una cuenta activa, según lo establecido por la regla de negocio \ref{RN12}.\hyperref[SUB-U-CU5:TB]{Trayectoria alternativa B}
+		\item \label{SUB-U-CU5:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU5:TA}
+	La información ingresada por el actor no es válida.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra al actor un mensaje indicando que la información ingresada no es válida.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU5:Ingresar} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+\paragraph{Trayectoria alternativa B} \label{SUB-U-CU5:TB}
+	La información ingresada por el actor, no corresponde a la de ninguna cuenta activa.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra un mensaje indicando al actor que la información ingresada es incorrecta.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU5:Pantalla} de la trayectoria principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU5:PE}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU5.1]{SUB-U-CU5.1-Recuperar contraseña} en el paso \ref{SUB-U-CU5:PresionaBoton} de la trayectoria principal.
+\end{enumerate}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Launch">
+
+  <TextView
+    android:id="@+id/IdControl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="19dp"
+    android:text="Control Sensor" />
+
+  <Button
+    android:id="@+id/IdDesconectar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/IdControl"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="129dp"
+    android:layout_marginEnd="15dp"
+    android:text="Envíar" />
+
+  <TextView
+    android:id="@+id/IdBufferIn"
+    android:layout_width="319dp"
+    android:layout_height="220dp"
+    android:layout_alignEnd="@+id/IdEncender"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="245dp"
+    android:layout_marginEnd="-217dp"
+    android:text="Datos Recibidos:" />
+
+  <EditText
+    android:id="@+id/txtHost"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="65dp"
+    android:layout_marginBottom="408dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="http://192.168.1.69:8080/tramas" />
+
+</RelativeLayout>

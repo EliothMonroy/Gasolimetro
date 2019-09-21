@@ -1,0 +1,85 @@
+\subsubsection{SUB-U-CU18-Consultar gasolinera}\label{SUB-U-CU18}
+El administrador puede consultar la información de una gasolinera así como las mediciones e insignias de la misma.
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU18-Consultar gasolinera \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Administrador consultar la información de una gasolinera. \\ \hline
+	\textbf{Actores} &
+		Administrador \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere consultar la información o mediciones de una gasolinera. \\ \hline 
+	\textbf{Entradas} & Gasolinera seleccionada.
+		% \begin{itemize}
+		% 		\item Nombre del automóvil.
+		% 		\item Modelo del automóvil.
+		% 		\item Marca del automóvil.
+		% 		\item Sensor usado en el automóvil.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Información de la gasolinera.
+			\item Mediciones hechas en la gasolinera.
+			\item Insignias de la gasolinera.
+		\end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & Existe al menos una gasolinera registrada.
+		\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item El actor puede verificar su cuenta.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra la información obtenida en pantalla al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Gasolineras} del menú \hyperref[fig:menu-admi]{Menú para Administrador}.
+		\item {[Sistema]} Obtiene las gasolineras registradas.
+		\item {[Actor]} Selecciona una gasolinera.
+		\item {[Sistema]} Obtiene la información de la gasolinera seleccionada.
+		\item {[Sistema]} Obtiene las mediciones asociadas a la gasolinera seleccionada.
+		\item {[Sistema]} Obtiene las insignias asociadas a la gasolinera seleccionada.
+		\item \label{SUB-U-CU18:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu18]{SUB-U-IU18-Consultar gasolinera} con la información obtenida.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU18:P1}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU19]{SUB-U-CU19-Editar gasolinera} en el paso \ref{SUB-U-CU18:Pantalla} de la Trayectoria principal.
+\end{enumerate}
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU18:P2}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU20]{SUB-U-CU20-Eliminar gasolinera} en el paso \ref{SUB-U-CU18:Pantalla} de la Trayectoria principal.
+\end{enumerate}
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

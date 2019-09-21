@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "162446199638",
+    "firebase_url": "https://gasolimetro-238718.firebaseio.com",
+    "project_id": "gasolimetro-238718",
+    "storage_bucket": "gasolimetro-238718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162446199638:android:3c96125519612c00",
+        "android_client_info": {
+          "package_name": "com.ipn.mx.gasolimetro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162446199638-407ans09e6cev37c20kvstvuo01ubspp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQv8Ohxew23ogYW6fm5MRaYKQK6Knu_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162446199638-407ans09e6cev37c20kvstvuo01ubspp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

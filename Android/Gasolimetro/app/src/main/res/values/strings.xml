@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_consultar_mapa_menu">Gasolimetro</string>
+
+    <string name="menu_mapa">Mapa</string>
+    <string name="menu_automoviles">Automoviles</string>
+    <string name="menu_reportar_error">Reportar error</string>
+    <string name="menu_cerrar_sesior">Cerrar sesión</string>
+
+    <string name="app_name">Gasolímetro</string>
+    <string name="title_activity_maps">Gasolímetro</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Elioth Monroy</string>
+    <string name="nav_header_subtitle">Perfil</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_registrar">Regístrate</string>
+    <string name="menu_agregar">Agregar gasolinera</string>
+    <string name="menu_consultar">Gasolineras</string>
+    <string name="menu_ver">Ver reportes</string>
+    <string name="menu_cerrar">Cerrar sesión</string>
+    <string name="menu_auto">Automóviles</string>
+    <string name="menu_sensor">Sensores</string>
+    <string name="menu_reportar">Reportar error</string>
+    <string name="menu_compartir">Compartir</string>
+
+    <string name="menu_fragment">Conectar sensor</string>
+    <string name="desconectar_sensor">Conectado</string>
+
+    <string name="menu_alert">Fragmen alert</string>
+
+    <string name="toolbar_tittle_create_account">Crear cuenta</string>
+    <string name="toolbar_tittle_menu_test">Menu test</string>
+    <string name="toolbar_tittle_generar_reporte">Generar reporte</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_tittle_registrar_usuario">Regístrate</string>
+    <string name="texto_boton_registrar_usuario">Crear cuenta</string>
+    <string name="hint_usuario_nombre">Nombre</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="toolbar_tittle_editar_usuario">Editar datos</string>
+    <string name="seleccionar_imagen_editar_usuario">Seleccionar foto de perfil</string>
+    <string name="texto_boton_editar_usuario">Guardar</string>
+    <string name="toolbar_tittle_consultar_panel_control">Panel de control</string>
+
+    <string name="dummy_nombre_usuario">Elioth Monroy</string>
+    <string name="toolbar_tittle_consultar_mapa">Gasolímetro</string>
+    <string name="texto_barra_inferior_nombre_gasolinera">Obteniendo nombre de gasolinera</string>
+    <string name="texto_barra_inferior_rating_gasolinera">Obteniendo rating</string>
+
+    <!-- String submodulo medicion -->
+    <string name="txt_calcularCombustible">Ingresa la cantidad de litros de gasolina que pagaste.</string>
+    <string name="btnContinuar">Continuar</string>
+    <string name="txtResultados">Resultados</string>
+    <string name="txtMensajeMedicion">La cantidad de gasolina que te cargaron fue:</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="direccion_gasolinera">Dirección gasolinera</string>
+    <string name="rating_gasolinera">Obteniendo rating</string>
+    <string name="total_mediciones_gasolinera">Total de mediciones hechas aquí: 200</string>
+    <string name="encabezado_insignias">Insignias:</string>
+    <string name="distancia_gasolinera">Obteniendo distancia</string>
+    <string name="tiempo_gasolinera">Obteniendo tiempo de llegada</string>
+    <string name="insignia_ejemplo">- Gasolinera limpia (10)</string>
+    <string name="txtPrecio">Precio en MXN: </string>
+    <string name="txtBomba">Selecciona la bomba: </string>
+    <string name="buttonEnviar_Text">Enviar</string>
+
+    <string name="toolbar_tittle_informacion_adicional_medicion">Información adicional</string>
+    <string name="hint_usuario_apellidop">Apellido paterno</string>
+    <string name="hint_usuario_apellidom">Apellido materno</string>
+    <string name="nombre_automovil">Automóvil 1</string>
+    <string name="marca_automovil">Marca</string>
+    <string name="modelo_auto">Modelo</string>
+    <string name="texto_nombre_usuario_no_registrado">Usuario no registrado</string>
+    <string name="nav_header_subtitle_admi">Administrador</string>
+    <string name="texto_subtitulo_usuario_no_registrado_nav">Iniciar sesión</string>
+    <string name="toolbar_tittle_autenticar_usuario">Iniciar sesión</string>
+    <string name="text_button_login">Iniciar sesión</string>
+    <string name="dont_have_account">¿No tienes una cuenta?</string>
+    <string name="create_here">\ ¡Crea una aquí!</string>
+    <string name="recuperar_contra">Recuperar contraseña</string>
+    <string name="toolbar_tittle_recuperar_contrasena">Recuperar contraseña</string>
+    <string name="text_button_recuperar_contra">Recuperar contraseña</string>
+    <string name="toolbar_tittle_seleccion_compartir">Compartir</string>
+    <string name="text_button_compartir_insignia">Compartir insignia</string>
+    <string name="text_button_compartir_medicion">Compartir medición</string>
+    <string name="login_error_campos_vacios">Por favor llene ambos campos</string>
+    <string name="error_server_no_disponible">Servicio no disponible temporalmente</string>
+    <string name="login_datos_incorrectos">Datos incorrectos</string>
+    <string name="recuperar_contra_correo_no_existe">Correo no registrado</string>
+    <string name="recuperar_contra_campo_vacio">Por favor ingrese su correo</string>
+    <string name="registrar_usuario_campos_vacios">Por favor llene todos los campos</string>
+    <string name="registrar_usuario_correo_en_uso">El correo electrónico ya se encuentra registrado</string>
+    <string name="exito_crear_cuenta">Cuenta creada</string>
+    <string name="exito_crear_automovil">Automovil agregado</string>
+    <string name="cuenta_no_verificada">Debe verificar su cuenta antes de iniciar sesión :(</string>
+    <string name="cuenta_bloqueada">Su cuenta ha sido suspendida, si lo desea, puede comunicarse a: gasolimetro@gmail.com</string>
+    <string name="titulo_cuenta_bloqueada">Cuenta bloqueada</string>
+    <string name="titulo_cuenta_no_verificada">Cuenta sin verificar</string>
+    <string name="titulo_exito_recuperar_contra">Recuperación de contraseña exitosa</string>
+    <string name="title_activity_consultar_sensores">Sensores</string>
+    <string name="hint_codigo_activacion">Código de activación</string>
+    <string name="hint_nombre_sensor">Nombre del sensor</string>
+    <string name="text_button_registrar_sensor">Registrar sensor</string>
+    <string name="toolbar_tittle_registrar_sensor">Registrar sensor</string>
+    <string name="titulo_exito_registrar_sensor">Sensor registrado exitosamente</string>
+    <string name="exito_registrar_sensor">Su sensor ha sido registrado exitosamente, gracias.</string>
+    <string name="codigo_sensor_ya_registrado">El código de activación del sensor ya ha sido previamente registrado</string>
+
+</resources>

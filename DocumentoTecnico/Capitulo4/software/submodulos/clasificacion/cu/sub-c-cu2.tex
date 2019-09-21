@@ -1,0 +1,72 @@
+\subsubsection{SUB-C-CU2-Consultar mapa}\label{SUB-C-CU2}
+Cuando el actor abre la aplicación móvil, se le muestra en un mapa su ubicación, junto con los iconos correspondientes a las gasolineras, que se encuentren en el radio definido por la regla de negocio \ref{RN9}.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-C-CU2-Consultar mapa \\ \hline
+	\textbf{Objetivo} &
+		Mostrar al actor las gasolineras cercanas a él, además de la clasificación de las mismas. \\ \hline
+	\textbf{Actores} &
+		\begin{itemize}
+			\item Cliente.
+			\item Usuario no registrado.
+			\item Administrador.
+		\end{itemize}
+		 \\ \hline 
+	\textbf{Disparador} & 
+		El actor ingresa a la aplicación móvil. \\ \hline
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Ubicación del actor.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Mapa que muestra las gasolineras cercanas a él, al igual que la clasificación y dirección de las mismas.
+		\end{itemize} \\ \hline
+	\textbf{Precondiciones} &
+		Ninguna.\\ \hline
+	\textbf{Postcondiciones} & El actor puede seleccionar una gasolinera de las que le aparecen en el mapa.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra el mapa con la clasificación de gasolinera al actor.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Alta. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & 
+		\begin{itemize}
+			\item \ref{RN8}.
+			\item \ref{RN9}.
+		\end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Abre la aplicación móvil.
+		\item {[Sistema]} Obtiene la ubicación del usuario.
+		\item {[Sistema]} Obtiene las gasolineras que se encuentran en un radio establecido por la regla de negocio \ref{RN8} del API de Google Maps.
+		\item {[Sistema]} Compara las gasolineras obtenidas en el paso anterior con las gasolineras registradas en el sistema.
+		\item {[Sistema]} De las gasolineras cercanas al actor, obtiene la clasificación, nombre y dirección de las mismas.
+		\item {[Sistema]} Muestra el icono en el mapa para cada una de las gasolineras según lo indicado por la regla de negocio \ref{RN9}.
+		\item \label{SUB-C-CU2:Pantalla} {[Sistema]} Muestra la información obtenida en la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Puntos de extensión} \label{SUB-C-CU2:PE}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-C-CU2.1]{SUB-C-CU2.1-Realizar recorrido} en el paso \ref{SUB-C-CU2:Pantalla} de la Trayectoria principal.
+	\item Caso de uso \hyperref[SUB-C-CU2.2]{SUB-C-CU2.2-Consultar gasolinera} en el paso \ref{SUB-C-CU2:Pantalla} de la Trayectoria principal.
+\end{enumerate}

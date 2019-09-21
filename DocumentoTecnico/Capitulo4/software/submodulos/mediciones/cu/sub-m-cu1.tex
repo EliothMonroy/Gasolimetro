@@ -1,0 +1,105 @@
+\subsubsection{SUB-M-CU1-Calcular cantidad de combustible cargado}\label{SUB-M-CU1}
+La cantidad de combustible que es recargado al automóvil es calculado a partir de la fórmula expresada por la Regla de Negocio \ref{RN1}, este cálculo se realiza cuando el microcontrolador empieza a enviar señales a la aplicación móvil, en la cual se realiza el proceso de cálculo.
+% \begin{description}
+% 	\item[Nombre del Caso de Uso] SUB-M-CU1-Calcular cantidad de combustible recargado.
+% 	\item[Objetivo] Obtener las señales enviadas por el sensor y a partir de estas, calcular la cantidad de combustible que fue cargado al automóvil.
+% 	\item[Actores] Sensor
+% 	\item[Disparador] El microcontrolador detecta un cambio de voltaje en la salida del sensor y envía a través del módulo Bluetooth tramas indicando un pulso de voltaje en alta.
+% 	\item[Entradas] \hfill
+% 		\begin{itemize}
+% 			\item Marca de tiempo de inicio de la recarga.
+% 			\item Tramas enviadas por el módulo Bluetooth.
+% 			\item Marca de tiempo de fin de la recarga.
+% 		\end{itemize}
+% 	\item[Salidas] \hfill 
+% 		\begin{itemize}
+% 			\item Cantidad de combustible recargado al automóvil.
+% 			\item Fecha y hora en la que se registró la recarga de combustible.
+% 		\end{itemize}
+% 	\item[Precondiciones] Ninguna.
+% 	\item[Postcondiciones] \hfill 
+% 		\begin{itemize}
+% 			\item El Cliente confirma la cantidad de combustible que le fue recargada.
+% 			\item La medición calculada junto con la fecha y hora son almacenados.
+% 		\end{itemize}
+% 	\item[Condiciones de término] 
+% 		\begin{itemize}
+% 			\item Se obtiene un número flotante que representa la cantidad de combustible cargado al automóvil.
+% 			\item Se obtiene la fecha y hora de la carga.
+% 		\end{itemize}
+% 	\item[Prioridad] Alta.
+% 	\item[Errores] Ninguno.
+% 	\item[Reglas de Negocio] \hfill
+% 		\begin{itemize}
+% 			\item \ref{RN1}.
+% 			\item \ref{RN2}.
+% 		\end{itemize}
+% \end{description}
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-M-CU1-Calcular cantidad de combustible cargado \\ \hline
+	\textbf{Objetivo} &
+		Obtener las señales enviadas por el sensor y a partir de estas, calcular la cantidad de combustible que fue cargado al automóvil. \\ \hline
+	\textbf{Actores} &
+		Sensor \\ \hline 
+	\textbf{Disparador} & 
+		El microcontrolador detecta un cambio de voltaje en la salida del sensor y envía a través del módulo Bluetooth tramas indicando un pulso de voltaje en alta. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Tramas enviadas por el módulo Bluetooth.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Cantidad de combustible recargado al automóvil.
+			\item Fecha y hora en la que se registró la recarga de combustible.
+		\end{itemize} \\ \hline
+	\textbf{Precondiciones} &
+		Ninguna.\\ \hline
+	\textbf{Postcondiciones} &
+		\begin{itemize}
+			\item El Cliente confirma la cantidad de combustible que le fue recargada.
+			\item La medición calculada junto con la fecha y hora son almacenados.
+		\end{itemize}\\ \hline
+	\textbf{Condiciones de término} & 
+		\begin{itemize}
+			\item Se obtiene un número flotante que representa la cantidad de combustible cargado al automóvil.
+			\item Se obtiene la fecha y hora de la carga.
+		\end{itemize} \\ \hline 
+	\textbf{Prioridad} & 
+		Alta. \\ \hline
+	\textbf{Errores} & 
+		\begin{itemize}
+			\item \label{SUB-M-CU1:Error1} Error 1: No se puede establecer una conexión inalámbrica entre el módulo Bluetooth y el dispositivo móvil, termina el caso de uso.
+		\end{itemize} \\ \hline
+	\textbf{Reglas de negocio} & 
+		\begin{itemize}
+			\item \ref{RN1}.
+			\item \ref{RN2}.
+		\end{itemize} \\ \hline
+
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Sensor]} Detecta un cambio de voltaje en la salida del sensor y envía una trama indicando un pulso de voltaje en alta. \hyperref[SUB-M-CU1:Error1]{Error 1}
+		\item {[Sistema]} Recibe la trama e inicializa el contador de impulsos en cero.
+		\item \label{SUB-M-CU1:MarcaInicio} {[Sistema]} Crea una marca de tiempo de inicio de la recarga de combustible.
+		\item \label{SUB-M-CU1:IncrementaContador} {[Sistema]} Incrementa el contador de impulsos en uno.
+		\item {[Sistema]} Verifica que no se reciban más tramas con un valor diferente a CERO durante al menos diez segundos, con base en la regla de negocio \ref{RN2}.\hyperref[SUB-M-CU1:TA]{[Trayectoria Alternativa A]}
+		\item {[Sistema]} Crea una marca de tiempo indicando el fin de la carga de combustible.
+		\item {[Sistema]} Calcula la cantidad de combustible cargado con base en la regla de negocio \ref{RN1}.
+		\item {[Sistema]} Obtiene la fecha y hora actuales.
+		\item {[Sistema]} Incluye el caso de uso \hyperref[SUB-M-CU1.1]{SUB-M-CU1.1-Confirmar medición}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-M-CU1:TA}
+	Se reciben al menos una trama antes de diez segundos.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1:IncrementaContador} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.

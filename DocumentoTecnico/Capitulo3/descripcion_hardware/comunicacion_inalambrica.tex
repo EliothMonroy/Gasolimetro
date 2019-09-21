@@ -1,0 +1,53 @@
+\subsection{Comunicación inalámbrica}\label{sec:bluetooth}
+Bluetooth: \\
+Bluetooth es una tecnología de conectividad inalámbrica de baja potencia que se utiliza para transmitir audio, transferir datos y transmitir información entre dispositivos. Hay dos sabores de la tecnología Bluetooth, velocidad básica / velocidad de datos mejorada (BR / EDR) y baja energía (LE)\cite{Bluetooth}. 
+\newline
+WiFi:\\
+WiFi es la abreviatura o el nombre comercial de Wireless Fidelity  y, como su nombre lo indica, es un sistema de conexión de ordenadores completamente inalámbrico, que permite a sus usuarios compartir y transferir información utilizando ondas de radio, es decir, sin utilizar cableado alguno.
+\\
+De esta manera, podemos mantener comunicaciones entre ordenadores, portátiles, móviles y otros dispositivos que cuenten con tecnología de recepción inalámbrica, facilitando enormemente las comunicaciones, incluso en lugares abiertos lejos de nuestras casas y oficinas.
+Las redes WiFi por lo general son de libre acceso, a menos que estén protegidas mediante contraseñas, lo cual, indicaría que son unas redes privadas utilizadas para conexiones con redes locales (LAN)\cite{WiFi}.
+\\
+En la tabla \ref{Comparacion_Conexiones} se muestran las características que tiene cada uno de los modos de conexión.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|M{4cm}|M{4cm}|M{4cm}|}
+		\hline
+		\textbf{Característica} & \textbf{Bluetooth} & \textbf{WiFi} \\ \hline
+		Frecuencia & 2.4GHz & 2.4,3.6,5 GHz \\ \hline
+		Costo & Bajo & Alto \\ \hline
+		Ancho de banda & 800Kbps & 11Mbps \\ \hline
+		Dispositivos que lo utilizan & Dispositivos móviles, mouse, teclado, computadoras,etc. & Dispositivos móviles, computadoras, TV,etc. \\ \hline
+		Requerimientos de hardware & Adaptador bluetooth entre los dispositivos conectados. & Adaptadores inalámbricos en todos los dispositivos de red o puntos de acceso. \\ \hline
+		Rango & 5-30 metros & 32 metros en interiores y 95 metros en exteriores \\ \hline
+		Consumo de energía & Bajo & Alto \\ \hline
+		Factibilidad de uso & Sencillo de utilizar, se pueden conectar hasta 7 dispositivos a la vez. & La dificultad de implementación aumenta debido a que se requiere configurar el hardware y software. \\ \hline
+		Latencia & 200 ms & 150 ms \\ \hline
+	\end{tabular}
+\caption{Tabla comparativa de comunicación inalámbrica}
+\label{Comparacion_Conexiones}
+\end{table}
+Debido a que la distancia requerida para realizar el envió de datos entre el microcontrolador y el dispositivo móvil es corta, el costo que el dispositivo tiene, y a que cuenta con una implementación sencilla se decidió utilizar la conexión inalámbrica de bluetooth para realizar la comunicación.
+\newline
+Tras definir el tipo de comunicación es necesario elegir el dispositivo que sera utilizado, por tal motivo en la tabla \ref{Comparacion_DispBluetooth} se muestran las características con las que cuentan dos distintos tipos de modulo Bluetooth.
+\\
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|M{4cm}|M{4cm}|M{4cm}|}
+		\hline
+		\textbf{Característica} & \textbf{HC-05} & \textbf{HC-06} \\ \hline
+		Modo de configuración & Maestro/Esclavo/Esclavo con autoconexión. & Esclavo \\ \hline
+		Frecuencia & 2.4GHz & 2.4GHz \\ \hline
+		Modulación & GFSK & GFSK \\ \hline
+		Potencia de emisión & $\leq$ 4dBm Clase 2 & $\leq$ 6dBm Clase 2 \\ \hline
+		Alcance & 5m a 10m & 5m a 10m \\ \hline
+		Velocidad & Asincrónica: 2.1 Mbps (max.)/160 kbps, sincrónica: 1 Mbps/1 Mbps & Asincrónica: 2 Mbps (max.)/160 kbps, sincrónica: 1 Mbps/1 Mbps \\ \hline
+		Consumo de corriente & 50mA & 30 mA a 40 mA \\ \hline
+		Voltaje de operación & 3.6 V a 6 V. & 3.6 V a 6 V \\ \hline
+		Pines & Módulo montado en tarjeta con regulador de voltaje y 6 pines suministrando acceso a VCC, GND, TXD, RXD, KEY y status LED (STATE) & Módulo montado en tarjeta con regulador de voltaje y 4 pines suministrando acceso a VCC, GND, TXD, y RXD \\ \hline
+		Precio & \$145 pesos & \$140 pesos\\ \hline
+	\end{tabular}
+	\caption{Tabla comparativa de dispositivos bluetooth}
+	\label{Comparacion_DispBluetooth}
+\end{table}
+El dispositivo bluetooth a utilizar es el módulo bluetooth HC-05 ya que este tiene el modo de configuración como maestro-esclavo lo cual se ajusta a las necesidades del trabajo, ademas de que el precio es accesible y no tiene mucha variación con respecto al HC-06.

@@ -1,0 +1,78 @@
+{
+   "html_attributions" : [],
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 19.5023601,
+               "lng" : -99.14931519999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.50369163029151,
+                  "lng" : -99.14801691970848
+               },
+               "southwest" : {
+                  "lat" : 19.5009936697085,
+                  "lng" : -99.1507148802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+         "id" : "360848b65e7b72feef91092f74c1cc4f095780e3",
+         "name" : "Pemex",
+         "photos" : [
+            {
+               "height" : 1920,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116916096605402013272/photos\"\u003eJose Luis Cortes Trujillo\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA9A5D7jxuuYCdXQvHZETAVxc7VigMFId8zHBq0VFGcv_PxgEmk-YY9gI3tRC7nF8a2czmyfoqq_UlOKedhpZEhKcZqOuw3kvxKKt9szRknwQ-vgfdUQOwwL1vBKPkiG-KEhB8B4IefV-hxX7C2K5Hqeb6GhT9e9R_QVHDQMajPdIFyvz9v0FDqg",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJpfDtbkr40YURFltZC5-whPg",
+         "plus_code" : {
+            "compound_code" : "GV22+W7 Mexico City, Mexico",
+            "global_code" : "76F2GV22+W7"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJpfDtbkr40YURFltZC5-whPg",
+         "scope" : "GOOGLE",
+         "types" : [ "gas_station", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 8,
+         "vicinity" : "Mexico"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 19.502525,
+               "lng" : -99.1493217
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.5038478302915,
+                  "lng" : -99.14804871970848
+               },
+               "southwest" : {
+                  "lat" : 19.5011498697085,
+                  "lng" : -99.1507466802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+         "id" : "d8534e3cf3729b1c9dbadc928b6dc25c94c9b7fb",
+         "name" : "Fabrica 1",
+         "place_id" : "ChIJW5yaXQP50YURbTDpIJDbrTI",
+         "plus_code" : {
+            "compound_code" : "GV32+27 Mexico City, Mexico",
+            "global_code" : "76F2GV32+27"
+         },
+         "reference" : "ChIJW5yaXQP50YURbTDpIJDbrTI",
+         "scope" : "GOOGLE",
+         "types" : [ "gas_station", "point_of_interest", "establishment" ],
+         "vicinity" : "Nueva Industrial Vallejo, Ciudad de México"
+      }
+   ],
+   "status" : "OK"
+}

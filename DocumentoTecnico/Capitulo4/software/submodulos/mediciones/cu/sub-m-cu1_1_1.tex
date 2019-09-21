@@ -1,0 +1,61 @@
+\subsubsection{SUB-M-CU1.1.1-Almacenar medición}\label{SUB-M-CU1.1.1}
+Posterior a que el actor confirme la cantidad de gasolina que le debió ser cargada, el sistema envía la información de la medición y lo ingresado por el actor al servidor web donde se hace persistencia de la información. 
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-M-CU1.1.1-Almacenar medición \\ \hline
+	\textbf{Objetivo} &
+		Procesar la información obtenida para que está pueda ser almacenada. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor confirma la cantidad de combustible que le fue cargado y presiona el botón \textit{Continuar}. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Cantidad de combustible cargada al automóvil.
+				\item Fecha y hora de la carga.
+				\item Cantidad de gasolina que el usuario ingreso.
+				\item Sensor en el que se realizó la medición.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & Ninguna.
+		% \begin{itemize}
+		% 	\item Cantidad de gasolina que debió ser cargada al automóvil.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & 
+		Ninguna.\\ \hline
+	\textbf{Postcondiciones} &
+		\begin{itemize}
+			\item La medición calculada puede ser consultada por el Cliente.
+			\item La medición se usa en la actualización automática de clasificación.
+		\end{itemize} \\ \hline
+	\textbf{Condiciones de término} & 
+		\begin{itemize}
+			\item Se persiste la información obtenida.
+		\end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Alta. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Sistema]} Obtiene la cantidad de gasolina cargada, y la fecha y hora calculados en el caso de uso \hyperref[SUB-M-CU1]{SUB-M-CU1-Calcular cantidad de combustible cargado}, y el sensor activo para el actor.
+		\item {[Sistema]} Obtiene la cantidad de gasolina ingresada por el usuario en el caso de uso \hyperref[SUB-M-CU1.1]{SUB-M-CU1.1-Confirmar medición}.
+		\item {[Sistema]} Persiste la información obtenida.
+		\item {[Sistema]} Muestra en la pantalla \hyperref[fig:sub-c-iu2]{SUB-U-IU2-Consultar mapa} un mensaje de éxito.
+	\end{enumerate}
+	Fin del caso de uso.

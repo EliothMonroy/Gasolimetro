@@ -1,0 +1,76 @@
+\subsubsection{SUB-U-CU9-Consultar reporte}\label{SUB-U-CU9}
+Un Administrador puede consultar los reportes generados por los Clientes, con la finalidad de dar una solución al problema y liberarlo.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU9-Consultar reporte \\ \hline
+	\textbf{Objetivo} &
+		Permitir al actor consultar un reporte especifico. \\ \hline
+	\textbf{Actores} & Administrador.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize}
+		 \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere consultar los reportes generados por los Clientes en busca de errores. \\ \hline 
+	\textbf{Entradas} & Ninguna.
+		% \begin{itemize}
+		% 		\item 
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Ninguna.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		Debe existir al menos un reporte generado.\\ \hline
+	\textbf{Postcondiciones} & El reporte puede ser liberado.
+		% \begin{itemize}
+		% 	\item 
+		% 	\item Un administrador puede liberar el reporte.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra la información del reporte en la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte}
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Ver reportes} del menú \hyperref[fig:menu-cliente]{Menú para Cliente}.\hyperref[SUB-U-CU9:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Obtiene los reportes generados por el actor.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte} con la información obtenida.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU9:TA}
+	El actor no se encuentra usando la aplicación móvil.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Actor]} Selecciona la opción \textit{Ver reportes} del menú \hyperref[fig:menu-cliente]{Menú para Administrador}.\hyperref[SUB-U-CU9:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Obtiene los reportes generados por los usuarios.
+		\item \label{SUB-M-CU9:TA-Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte} con la información obtenida.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU9:PE}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU9.1]{SUB-U-CU9.1-Liberar reporte} en el paso \ref{SUB-M-CU9:TA-Pantalla} de la Trayectoria alternativa A.
+\end{enumerate}

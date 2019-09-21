@@ -1,0 +1,40 @@
+\paragraph{SUB-U-CU1-Registrar usuario}\label{SUB-U-CU1:Pruebas}
+En la tabla \ref{pruebas_unitarias_sub-u-cu1} se pueden observar los resultados de las pruebas unitarias realizadas.
+\begin{longtable}{|M{2cm}| M{4.5cm}|M{3cm}|M{3cm}|M{1.5cm}|}
+	\hline
+	\textbf{Prueba} & \textbf{Valores ingresados} & \textbf{Resultado esperado} & \textbf{Resultado obtenido} & \textbf{Prueba exitosa} \\ \hline
+	Prueba de Trayectoria Principal 1& 
+	\begin{itemize}
+		\item Nombre: Elioth
+		\item Apellido paterno: Monroy
+		\item Apellido materno: Martos
+		\item Correo electrónico: eliothmonroy@gmail.com
+		\item Contraseña: contra124
+	\end{itemize}
+	& Registro exitoso
+	& Registro exitoso & Si \\ \hline
+
+	Prueba de Trayectoria Principal 2& 
+	\begin{itemize}
+		\item Nombre: Juan Daniel
+		\item Apellido paterno: Castillo
+		\item Apellido materno: Reyes
+		\item Correo electrónico: castilloreyesjuan@gmail.com
+		\item Contraseña: alma123
+	\end{itemize}
+	& Registro exitoso
+	& Registro exitoso & Si \\ \hline
+
+	Prueba de Trayectoria Alternativa A 1& 
+	\begin{itemize}
+		\item Nombre: Elioth
+		\item Apellido paterno: Monroy
+		\item Apellido materno: Martos
+		\item Correo electrónico: eliothmonroy@gmail.com
+		\item Contraseña: contra124
+	\end{itemize}
+	& Registro fallido
+	& Correo electrónico en uso & Si \\ \hline
+	\caption{Resultados de las pruebas unitarias del caso de uso SUB-U-CU1-Registrar usuario}
+	\label{pruebas_unitarias_sub-u-cu1}
+\end{longtable}

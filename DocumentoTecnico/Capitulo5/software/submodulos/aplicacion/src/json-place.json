@@ -1,0 +1,23 @@
+{
+   "html_attributions" : [],
+   "result" : {
+      "formatted_address" : "Av Instituto Politécnico Nacional 1881, Lindavista Nte., 07300 Ciudad de México, CDMX, Mexico",
+      "geometry" : {
+         "location" : {
+            "lat" : 19.4951269,
+            "lng" : -99.13241499999999
+         },
+         "viewport" : {
+            "northeast" : {
+               "lat" : 19.4964928802915,
+               "lng" : -99.13116506970849
+            },
+            "southwest" : {
+               "lat" : 19.4937949197085,
+               "lng" : -99.13386303029149
+            }
+         }
+      }
+   },
+   "status" : "OK"
+}

@@ -1,0 +1,82 @@
+\subsection{Factibilidad económica}
+La siguiente sección presenta la factibilidad económica del proyecto, ésta se encuentra divida en tres partes donde se realiza el análisis económico del módulo de hardware, posteriormente se realiza el análisis y las estimaciones del módulo de software, y finalmente se calcula el costo total del proyecto realizando un análisis de la factibilidad del proyecto.
+
+\subsubsection{Hardware}
+La estimación de Hardware, se realizará con base en los componentes electrónicos que integrarán cada unidad de medición que se venderá al usuario final, dicha unidad de medición deberá cumplir con las siguientes características:
+\begin{itemize}
+	\item Permitirá la medición de la cantidad de litros ingresados a un automóvil durante el proceso de suministro de gasolina.
+	\item Permitirá la comunicación entre el sensor y una aplicación móvil.
+\end{itemize}
+
+\paragraph{Unidad de medición} Para cumplir con las características se hará uso de los siguientes elementos de hardware:
+
+\begin{longtable}{|M{4cm}|M{6.5cm}|M{4cm}|}
+	\hline
+	\textbf{Unidad de hardware} & \textbf{Descripción} &\textbf{Valor (MXN)}
+	\\\hline
+	Caudalimetro Modelo FS400A-G1 & Permite la medición de la cantidad de litros de gasolina que pasan a través del sensor & \$348
+	\\\hline
+	Microcontrolador Modelo ATmega16 & Permite el tratamiento y el análisis de la señal generada por el caudalímetro & \$100
+	\\\hline
+	Modulo Bluetooth Modelo Hc-06  & 8~60 litros/min & \$145
+	\\\hline
+	\caption{Estimaciones de costos para el modulo de hardware}
+	\label{tabla_fatibilidad_economica} 
+\end{longtable}
+A continuación, se ponen las URL de los sitios web donde se compraron los componentes, puede dar click en el componente deseado y será redirigido a la página web correspondiente:
+
+\begin{itemize}
+	\item  \href{https://articulo.mercadolibre.com.mx/MLM-563607650-caudalimetro-sensor-de-flujo-liquidos-1-pulgada-1-a-60-lmin-_JM?fbclid=IwAR1_qJeWVCpg_5bPhjg7R-Mcx2q9eO3CDDKzBXMvJtp12USAU0zp46vphmk}{Caudalímetro}
+	\item \href{https://articulo.mercadolibre.com.mx/MLM-552397250-modulo-bluetooth-hc-06-para-arduino-pic-raspberry-_JM?matt_tool=&matt_word=&gclid=CjwKCAjw9sreBRBAEiwARroYm1LdtLoloDq74O455SEt5xQutPzGfCwV67LSzx-MMpatIKUnfq6yphoCuKMQAvD_BwE}{Microcontrolador}
+	\item \href{https://www.microchip.com/wwwproducts/en/ATmega16}{Módulo Bluetooth} 
+\end{itemize}
+
+\paragraph{Precio unitaria por unidad de medición}La tabla anterior nos arroja que cada unidad de medición de producción creada necesitará una inversión mínima de \$629 para obtener todos sus componentes. Esta medida unitaria será sumada a las estimaciones de software para poder realizar el posterior análisis de factibilidad.
+
+
+\subsubsection{Software}
+Para el análisis de costos de software, así como para las estimaciones se utilizaron las siguientes herramientas:
+\begin{itemize}
+	\item Estimación del costo del proyecto: Modelo COCOMO II
+	\item Estimación de la demanda: Benchmarking, Técnicas de recolección de Información (encuestas).
+\end{itemize}
+
+
+\paragraph{Estimaciones del proyecto}
+Comenzaremos la estimación del proyecto identificando los componentes de software que conformarán el Trabajo Terminal, el análisis actual contempla los siguientes componentes: Servidor Web, Base de Datos y la Aplicación Móvil.
+
+Una vez que se han definido componentes de software del proyecto se describirán los factores y las técnicas utilizadas para la estimación del costo del proyecto.
+
+\paragraph{Métricas} Es importante definir algunos puntos importantes que influyen en nuestra estimación de costos.
+\begin{itemize}
+	\item Complejidad: Elevada, debido a la integración de diferentes de hardware y software.
+	\item Tamaño: Medio, debido a la cantidad de módulos y submódulos a desarrollar tanto de hardware como software
+	\item Grado de Incertidumbre: Medio, debido a la experiencia del equipo.
+	\item Disponibilidad de Información Histórica: Elevado, debido a la cantidad de proyectos similares a los cuáles se tiene acceso.
+\end{itemize}
+
+Para éste proyecto se desarrollaron las estimaciones de: 
+\begin{itemize}
+	\item Costo – Medido en MXN.
+	\item Esfuerzo – Medido en Personas/Mes
+	\item Tiempo – Medido en meses
+\end{itemize}	
+
+utilizando dos técnicas de Ingeniería de Software, enumeradas a continuación:
+
+\begin{itemize}
+	\item Técnicas de Descomposición: Específicamente se hizo uso de Estimaciones por número de LOC
+	\item Técnicas Empíricas: Mediante el uso del Modelo COCOMO II
+\end{itemize}
+\paragraph{Estimación por el Modelo COCOMO II}
+El primer paso para la estimación por modelo COCOMO es la obtención de la Métrica de Software conocida como LOC Lines Of Code, la cual, representa el número de líneas de código que se escribieron para poder liberar una funcionalidad dentro del sistema.
+A continuación, se muestra una tabla en la que se enumeran los LOC para cada módulo y sus correspondientes submódulos del proyecto.
+
+
+
+\subsection{Análisis de factibilidad}
+De acuerdo con los parámetros obtenidos en la métricas de hardware y software se realiza el siguiente análisis de factibilidad económica:
+\begin{itemize}
+	\item En fase de desarrollo el proyecto terminal resulta viable pues los elementos de hardware necesarios tiene  un precio de aproximadamente \$500, las demás herramientas de software, pruebas, así como la mano de obra son proporcionadas por el IPN y los integrantes del equipo.
+	\item Por otro lado si el actual proyecto llegará la etapa de comercialización, los costos unitarios por la producción de cada unidad de medición aumentarían y los costos de desarrollo de software deberían ser cubiertos mediante el uso de un crédito, lo cuál nos llevaría a establecer un análisis de la demanda saber si la TIR (Tasa de Retorno de Inversió) es favorable.
+\end{itemize}

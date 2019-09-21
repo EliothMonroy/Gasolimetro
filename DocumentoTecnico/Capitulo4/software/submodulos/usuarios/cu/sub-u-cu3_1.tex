@@ -1,0 +1,73 @@
+\subsubsection{SUB-U-CU3.1-Consultar insignia}\label{SUB-U-CU3.1}
+Un Cliente puede consultar la información correspondiente a una insignia que haya obtenido.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU3.1-Consultar insignia \\ \hline
+	\textbf{Objetivo} &
+		Permitir al actor consultar información sobre una insignia que haya obtenido. \\ \hline
+	\textbf{Actores} &
+		Cliente. \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere obtener información especifica sobre una insignia.\\ \hline 
+	\textbf{Entradas} & Insignia seleccionada.
+		% \begin{itemize}
+		% 		\item Nombre.
+		% 		\item Imagen de perfil.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Información sobre la insignia.
+		% \begin{itemize}
+		% 	\item Imagen de perfil del actor.
+		% 	\item Nombre del actor.
+		% 	\item Mediciones hechas por el actor.
+		% 	\item Insignias obtenidas por el actor.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		El actor debe haber obtenido al menos una insignia.\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item El nombre e imagen de perfil son actualizados.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra la información de la insignia al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona una insignia de la pantalla \hyperref[fig:sub-u-iu3]{SUB-U-IU3-Consultar panel de control}.
+		\item {[Sistema]} Obtiene la información de la insignia seleccionada.
+		\item {[Sistema]} Muestra la información obtenida en la pantalla \hyperref[fig:sub-u-iu3.1]{SUB-U-IU3.1-Consultar insignia}.
+		\item {[Actor]} Presiona el botón \textit{Aceptar}.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu3]{SUB-U-IU3-Consultar panel de control}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

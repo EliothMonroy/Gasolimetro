@@ -1,0 +1,22 @@
+\subsection{Microcontrolador}\label{sec:micro}
+Un microcontrolador contiene todos los componentes que le permiten operar de forma independiente,
+y ha sido diseñado en particular para tareas de monitoreo y/o control. En consecuencia,
+Además del procesador, incluye memoria, varios controladores de interfaz, uno o
+más temporizadores, un controlador de interrupción y, por último, pero no menos importante, pines de E/S de propósito general,
+lo que le permite interactuar directamente con su entorno. Los microcontroladores también incluyen operaciones de bits\cite{Micro}.
+\\
+En la tabla \ref{Tabla_comparativa_microcontroladores} se tiene la compración entre distintos microcontroladores, los cuales fueron considerados para utilizarse en el presente trabajo terminal. 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|M{3.2cm}|M{1cm}|M{1.3cm}|M{2cm}|M{1.7cm}|M{1.7cm}|M{2cm}|}
+		\hline 
+		\textbf{Microcontrolador} & \textbf{Flash (KB)} & \textbf{SRAM (Byte)} & \textbf{EEPROM (Byte)} & \textbf{I/O Pins}& \textbf{A/D (Canales)}& \textbf{Interfaces}\\ \hline
+		ATMega8535 & 8 & 512 & 512 & 32 & 10 & SPI,  USART \\ \hline
+		ATMega16 & 16 & 1024 & 512& 32 & 8& JTAG, SPI, IIC \\ \hline
+		ATtiny15L & 1 & - & 64 & 6 & 4 & SPI \\ \hline
+		DSPIC30F4013 & 48 & 2048 & 1024 & 16 & 12 & SPI, UART, IIC, CAN \\ \hline
+	\end{tabular}
+	\caption{Tabla comparativa microcontroladores}
+	\label{Tabla_comparativa_microcontroladores}
+\end{table}
+El microcontrolador a utilizar será el ATMega16 debido a que nos proporciona dos interfaces de comunicación serial las cuales serán importantes en el envío de los datos por medio del módulo Bluetooth, asimismo nos ofrece una mayor capacidad de memoria Flash y SRAM. Otro factor importante para elegir este microcontrolador fue que las herramientas de programación para este dispositivo son compatibles con los sistemas operativos más recientes lo cual nos permite hacer simulaciones del funcionamiento de nuestro código antes de tenerlo programado en el dispositivo.  

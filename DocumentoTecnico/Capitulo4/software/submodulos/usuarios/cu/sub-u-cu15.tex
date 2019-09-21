@@ -1,0 +1,74 @@
+\subsubsection{SUB-U-CU15-Eliminar sensor}\label{SUB-U-CU15}
+Un Cliente puede eliminar un sensor que haya registrado previamente.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU15-Eliminar sensor \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente eliminar un sensor. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere eliminar un sensor. \\ \hline 
+	\textbf{Entradas} & Sensor seleccionado.
+		% \begin{itemize}
+		% 		\item 
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Mensaje de éxito.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & El actor tiene registrado al menos un sensor.
+		\\ \hline
+	\textbf{Postcondiciones} & El sensor es eliminado y no puede ser asociado a ningún automóvil ni a ninguna medición.
+		% \begin{itemize}
+		% 	\item El actor puede verificar su cuenta.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra el mensaje de éxito al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Sensor} del menú \hyperref[fig:menu-cliente]{Menú para Cliente}.
+		\item {[Sistema]} Obtiene los sensores registrados por el actor.
+		\item {[Actor]} Selecciona un sensor.
+		\item {[Sistema]} Obtiene la información del sensor seleccionado.
+		\item {[Actor]} Presiona el botón \textit{Eliminar}.
+		\item {[Sistema]} Muestra un mensaje de confirmación.
+		\item {[Actor]} Presiona el botón \textit{Aceptar}.\hyperref[SUB-U-CU13:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Elimina la información del sensor seleccionado.
+		\item {[Sistema]} Muestra un mensaje de éxito indicando al actor que la acción fue realizada exitosamente.
+		\item \label{SUB-U-CU15:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

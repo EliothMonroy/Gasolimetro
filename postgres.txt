@@ -1,0 +1,20 @@
+Tutorial de instalación Mac:
+https://www.robinwieruch.de/postgres-sql-macos-setup/
+
+Iniciar/parar servicio:
+pg_ctl -D /usr/local/var/postgres start
+pg_ctl -D /usr/local/var/postgres stop
+
+Crear/eliminar db:
+createdb mydatabasename
+dropdb mydatabasename
+
+conectarse a una bd
+psql mydatabasename
+
+extensiones de db (una vez que nos conectamos):
+create extension cube;
+create extension earthdistance;
+
+Consultar ejemplo:
+select (point(-99.14932,19.50213) <@> point(-99.146911,19.504507)) as distance;

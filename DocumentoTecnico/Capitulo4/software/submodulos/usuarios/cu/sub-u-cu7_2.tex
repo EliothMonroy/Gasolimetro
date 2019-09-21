@@ -1,0 +1,83 @@
+\subsubsection{SUB-U-CU7.2-Compartir medición}\label{SUB-U-CU7.2}
+Un Cliente puede compartir en redes sociales alguna medición que haya realizado.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU7.2-Compartir medición \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente compartir en redes sociales una medición que haya realizado. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere compartir una medición realizada en redes sociales. \\ \hline 
+	\textbf{Entradas} & Medición seleccionada.
+		% \begin{itemize}
+		% 		\item Cantidad de combustible cargada al automóvil.
+		% 		\item Fecha y hora de la carga.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Medición compartida en redes sociales.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		El actor debe haber realizado al menos una medición.\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item La medición calculada puede ser consultada por el Cliente.
+		% 	\item La medición se usa en el algoritmo de clasificación.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & La medición es compartida en una red social.
+		% 	\item El Cliente ingresa la cantidad de combustible que debió ser cargada.
+		% 	\item Se realiza persistencia de la información calculada e ingresada.
+		% \end{itemize} \begin{itemize}
+		
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona sobre el botón \textit{Compartir medición} de la pantalla \hyperref[fig:sub-u-iu7.a]{SUB-U-IU7-Compartir información}.
+		\item {[Sistema]} Obtiene las mediciones realizadas por el actor.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu7.2]{SUB-U-IU7.2-Compartir medición} con la información obtenida.
+		\item {[Actor]} Selecciona una medición.
+		\item {[Actor]} Presiona el botón \textit{Compartir}.
+		\item \label{SUB-U-CU7.2:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu7.b]{SUB-U-IU7-Compartir información (b)}.
+		\item {[Actor]} Selecciona la red social en la que requiere compartir la medición.
+		\item {[Sistema]} Comparte la medición en la red social seleccionada.
+		\item  {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.
+
+% \paragraph{Puntos de extensión} \label{SUB-M-CU1.1:P}
+% \begin{enumerate}[label=PE\arabic*.]
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.3]{SUB-M-CU1.1.3-Obtener insignia} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.4]{SUB-M-CU1.1.4-Asignar insignia a gasolinera} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.5]{SUB-M-CU1.1.5-Especificar bomba} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% \end{enumerate}

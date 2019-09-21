@@ -1,0 +1,90 @@
+\subsubsection{SUB-U-CU10-Registrar automóvil}\label{SUB-U-CU10}
+Un Cliente puede registrar un automóvil desde el que estará haciendo mediciones con un sensor.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU10-Registrar automóvil \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente registrar un automóvil. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere registrar un automóvil. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Nombre del automóvil.
+				\item Modelo del automóvil.
+				\item Marca del automóvil.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & Mensaje de éxito.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & Ninguna.
+		\\ \hline
+	\textbf{Postcondiciones} & El automóvil registrado puede ser asociado a un sensor.
+		% \begin{itemize}
+		% 	\item El actor puede verificar su cuenta.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra el mensaje de éxito al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & \ref{RN11}.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Automóviles} del menú \hyperref[fig:menu-cliente]{Menú para Cliente}.
+		\item {[Sistema]} Obtiene los automóviles registrados por el actor.\hyperref[SUB-U-CU10:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Muestra la lista de automóviles asociados al actor.
+		\item \label{SUB-U-CU10:Agregar} {[Actor]} Presiona el icono \textit{Agregar automóvil}.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu10]{SUB-U-IU10-Registrar automóvil}.
+		\item \label{SUB-U-CU10:Ingresar} {[Actor]} Ingresa la información solicitada por la pantalla.
+		\item {[Actor]} Presiona el botón \textit{Registrar}.
+		\item {[Sistema]} Verifica que la información ingresada por el usuario sea válida la información ingresada por el usuario, según lo indicado por la regla de negocio \ref{RN11}.\hyperref[SUB-U-CU10:TB]{Trayectoria alternativa B}
+		\item {[Sistema]} Persiste la información ingresada.
+		\item {[Sistema]} Muestra un mensaje de éxito indicando al actor que la acción fue realizada exitosamente.
+		\item \label{SUB-U-CU10:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU10:TA}
+	El actor no tiene ningún automóvil registrado.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra un mensaje al actor indicando que aún no tiene automóviles registrados.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU10:Agregar} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+\paragraph{Trayectoria alternativa B} \label{SUB-U-CU10:TB}
+	La información ingresada por el actor no es válida.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra al actor un mensaje indicando que la información ingresada no es válida.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU10:Ingresar} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+% \paragraph{Puntos de extensión} \label{SUB-M-CU1.1:P}
+% \begin{enumerate}[label=PE\arabic*.]
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.3]{SUB-M-CU1.1.3-Obtener insignia} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.4]{SUB-M-CU1.1.4-Asignar insignia a gasolinera} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.5]{SUB-M-CU1.1.5-Especificar bomba} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% \end{enumerate}

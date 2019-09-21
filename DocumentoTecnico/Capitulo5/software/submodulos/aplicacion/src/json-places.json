@@ -1,0 +1,38 @@
+{
+   "html_attributions" : [],
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 19.5023601,
+               "lng" : -99.14931519999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 19.50369163029151,
+                  "lng" : -99.14801691970848
+               },
+               "southwest" : {
+                  "lat" : 19.5009936697085,
+                  "lng" : -99.1507148802915
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png",
+         "id" : "360848b65e7b72feef91092f74c1cc4f095780e3",
+         "name" : "Pemex",
+         "place_id" : "ChIJpfDtbkr40YURFltZC5-whPg",
+         "plus_code" : {
+            "compound_code" : "GV22+W7 Mexico City, Mexico",
+            "global_code" : "76F2GV22+W7"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJpfDtbkr40YURFltZC5-whPg",
+         "scope" : "GOOGLE",
+         "types" : [ "gas_station", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 8,
+         "vicinity" : "Mexico"
+      }
+   ],
+   "status" : "OK"
+}

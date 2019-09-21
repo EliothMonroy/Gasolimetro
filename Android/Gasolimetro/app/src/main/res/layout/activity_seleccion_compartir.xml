@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuarios.SeleccionCompartir">
+
+    <include layout="@layout/actionbar_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/double_fab_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <Button
+            android:id="@+id/boton_compartir_insignia"
+            android:onClick="compartirInsignia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_button_compartir_insignia"
+            android:theme="@style/RaisedButtonDark" />
+
+        <Button
+            android:layout_marginTop="@dimen/fab_margin"
+            android:id="@+id/boton_compartir_medicion"
+            android:onClick="compartirMedicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_button_compartir_medicion"
+            android:theme="@style/RaisedButtonDark"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

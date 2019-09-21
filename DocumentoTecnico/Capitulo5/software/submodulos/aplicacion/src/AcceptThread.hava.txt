@@ -1,0 +1,54 @@
+
+    private class AcceptThread extends Thread {
+        private final BluetoothServerSocket mmServerSocket;
+
+        public AcceptThread() {
+            // Use a temporary object that is later assigned to mmServerSocket,
+            // because mmServerSocket is final
+            BluetoothServerSocket tmp = null;
+            try {
+                // MY_UUID is the app's UUID string, also used by the client code
+                //tmp = bluetoothAdapter.listenUsingRfcommWithServiceRecord("HC-05", BTMODULEUUID);
+                tmp = bluetoothAdapter.listenUsingInsecureRfcommWithServiceRecord("G Pro Lite",BTMODULEUUID);
+            } catch (Exception e) {
+                Log.d("Valor", "----> Bluetooth error server: "+e.getMessage());
+            }
+            mmServerSocket = tmp;
+        }
+
+        public void run() {
+            BluetoothSocket socket = null;
+            // Keep listening until exception occurs or a socket is returned
+            while (true) {
+                try {
+                    socket = mmServerSocket.accept();
+                } catch (Exception e) {
+                    Log.d("valor", "----> Server socket accept: "+e.toString());
+                    Log.d("valor", "----> Cause: "+e.getCause());
+
+                    break;
+                }
+                // If a connection was accepted
+                if (socket != null) {
+                    // Do work to manage the connection (in a separate thread)
+                    //manageConnectedSocket(socket);
+                    Log.d("valor", "----> Socket creado");
+                    try {
+                        mmServerSocket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                }else{
+                    Log.d("valor", "----> Socket no creado");
+                }
+            }
+        }
+
+        /** Will cancel the listening socket, and cause the thread to finish */
+        public void cancel() {
+            try {
+                mmServerSocket.close();
+            } catch (IOException e) { }
+        }
+    }

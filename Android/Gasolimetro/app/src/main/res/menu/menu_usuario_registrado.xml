@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none" android:id="@+id/grupo1">
+        <item
+            android:id="@+id/nav_fragment"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="@string/menu_fragment" />
+        <item
+            android:id="@+id/nav_auto"
+            android:icon="@drawable/ic_menu_auto"
+            android:title="@string/menu_auto" />
+        <item
+            android:id="@+id/nav_sensor"
+            android:icon="@drawable/ic_menu_sensor"
+            android:title="@string/menu_sensor" />
+        <item
+            android:id="@+id/nav_compartir"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/menu_compartir" />
+        <!--<item
+            android:id="@+id/nav_reportar"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_reportar" />-->
+    </group>
+
+    <group android:id="@+id/grupo2">
+
+        <item
+            android:id="@+id/nav_cerrar_usuario"
+            android:icon="@drawable/ic_menu_cerrar"
+            android:title="@string/menu_cerrar"/>
+    </group>
+
+</menu>

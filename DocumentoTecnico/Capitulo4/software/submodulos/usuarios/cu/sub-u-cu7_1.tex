@@ -1,0 +1,76 @@
+\subsubsection{SUB-U-CU7.1-Compartir insignia}\label{SUB-U-CU7.1}
+Un Cliente puede compartir en redes sociales alguna insignia que haya obtenido.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU7.1-Compartir insignia \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente compartir en redes sociales una insignia que haya obtenido. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere compartir una insignia en redes sociales. \\ \hline 
+	\textbf{Entradas} & Insignia seleccionada.
+		% \begin{itemize}
+		% 		\item Cantidad de combustible cargada al automóvil.
+		% 		\item Fecha y hora de la carga.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Insignia compartida en redes sociales.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		El actor debe tener al menos una insignia.\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item La medición calculada puede ser consultada por el Cliente.
+		% 	\item La medición se usa en el algoritmo de clasificación.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & La insignia es compartida en una red social.
+		% 	\item El Cliente ingresa la cantidad de combustible que debió ser cargada.
+		% 	\item Se realiza persistencia de la información calculada e ingresada.
+		% \end{itemize} \begin{itemize}
+		
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona sobre el botón \textit{Compartir insignia} de la pantalla \hyperref[fig:sub-u-iu7.a]{SUB-U-IU7-Compartir información}.
+		\item {[Sistema]} Obtiene las insignia asociadas al actor.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu7.1]{SUB-U-IU7.1-Compartir insignia} con la información obtenida.
+		\item {[Actor]} Selecciona una insignia.
+		\item {[Actor]} Presiona el botón \textit{Compartir}.
+		\item \label{SUB-U-CU7.1:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu7.b]{SUB-U-IU7-Compartir información (b)}.
+		\item {[Actor]} Selecciona la red social en la que requiere compartir la insignia.
+		\item {[Sistema]} Comparte la insignia en la red social seleccionada.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

@@ -1,0 +1,42 @@
+\paragraph{SUB-U-CU6-Consultar medición}\label{SUB-U-CU6:Pruebas}
+En la tabla \ref{pruebas_unitarias_sub-u-cu6} se pueden observar los resultados de las pruebas unitarias realizadas.
+\begin{longtable}{|M{2cm}| M{4.5cm}|M{3cm}|M{3cm}|M{1.5cm}|}
+	\hline
+	\textbf{Prueba} & \textbf{Valores ingresados} & \textbf{Resultado esperado} & \textbf{Resultado obtenido} & \textbf{Prueba exitosa} \\ \hline
+	Prueba de Trayectoria Principal 1 & Medición con identificador: 1.
+	& 
+	\begin{itemize}
+		\item Gasolinera en la que fue realizada la medición: Gasolinera cien metros.
+		\item Fecha y hora de medición: 01/06/19 12:00
+		\item Cantidad de litros cargados: 20
+		\item Cantidad de litros pedidos: 20
+	\end{itemize}
+	&
+	\begin{itemize}
+		\item Gasolinera en la que fue realizada la medición: Gasolinera cien metros.
+		\item Fecha y hora de medición: 01/06/19 12:00
+		\item Cantidad de litros cargados: 20
+		\item Cantidad de litros pedidos: 20
+	\end{itemize}
+	& Si \\ \hline
+
+	Prueba de Trayectoria Principal 2 & Medición con identificador: 2.
+	& 
+	\begin{itemize}
+		\item Gasolinera en la que fue realizada la medición: Gasolinera cien metros.
+		\item Fecha y hora de medición: 01/06/19 12:00
+		\item Cantidad de litros cargados: 20
+		\item Cantidad de litros pedidos: 20
+	\end{itemize}
+	&
+	\begin{itemize}
+		\item Gasolinera en la que fue realizada la medición: Gasolinera cien metros.
+		\item Fecha y hora de medición: 01/06/19 12:15
+		\item Cantidad de litros cargados: 10
+		\item Cantidad de litros pedidos: 10
+	\end{itemize}
+	& Si \\ \hline
+
+	\caption{Resultados de las pruebas unitarias del caso de uso SUB-U-CU6-Consultar medición}
+	\label{pruebas_unitarias_sub-u-cu6}
+\end{longtable}

@@ -1,0 +1,96 @@
+\subsubsection{SUB-U-CU5.1-Recuperar contraseña}\label{SUB-U-CU5.1}
+Un actor puede recuperar su contraseña en caso de no recordarla.
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU5.1-Recuperar contraseña \\ \hline
+	\textbf{Objetivo} &
+		Permitir al actor recuperar su contraseña para que se pueda autenticar en el sistema. \\ \hline
+	\textbf{Actores} &
+		Usuario no registrado. \\ \hline 
+	\textbf{Disparador} & 
+		El actor no recuerda su contraseña. \\ \hline 
+	\textbf{Entradas} & Correo electrónico.
+		% \begin{itemize}
+		% 		\item Cantidad de combustible cargada al automóvil.
+		% 		\item Fecha y hora de la carga.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Correo electrónico con una contraseña nueva asignada por el sistema.
+		% \begin{itemize}
+		% 	\item Cantidad de gasolina que debió ser cargada al automóvil.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		La actor debe tener una cuenta activa.\\ \hline
+	\textbf{Postcondiciones} & El actor puede autenticarse con su nueva contraseña.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Es enviado un correo electrónico al actor con una nueva contraseña con la cual se puede autenticar.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Media. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & 
+		\begin{itemize}
+			\item \ref{RN11}.
+			\item \ref{RN12}.
+		\end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona el botón \textit{Recuperar contraseña} de la pantalla \hyperref[fig:sub-u-iu5]{Autenticar usuario}.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu5.1]{SUB-U-IU5.1-Recuperar contraseña}.
+		\item \label{SUB-U-CU5.1:Ingresar} {[Actor]} Ingresa la información solicitada por la pantalla.
+		\item {[Actor]} Presiona el botón \textit{Recuperar}.
+		\item {[Sistema]} Verifica que la información ingresada por el actor sea válida, según lo indicado por la regla de negocio \ref{RN11}.\hyperref[SUB-U-CU5.1:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Verifica que el correo electrónico ingresado por el actor corresponda al de una cuenta activa, según lo establecido por la regla de negocio \ref{RN12}.\hyperref[SUB-U-CU5.1:TB]{Trayectoria alternativa B}
+		\item {[Sistema]} Genera una nueva contraseña para el actor.
+		\item {[Sistema]} Envía la contraseña generada en el paso anterior, al correo electrónico ingresado por el actor.
+		\item {[Sistema]} Muestra un mensaje indicando que le ha sido enviado un correo electrónico con una nueva contraseña.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU5.1:TA}
+	La información ingresada por el actor no es válida.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra al actor un mensaje indicando que la información ingresada no es válida.
+		\item {[Sistema]} Continúa en el paso \ref{SUB-U-CU5.1:Ingresar} de la Trayectoria Principal.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.
+
+\paragraph{Trayectoria alternativa B} \label{SUB-U-CU5.1:TB}
+	La cuenta asociada al correo electrónico ingresado por el actor no se encuentra activa.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Sistema]} Muestra al actor un mensaje indicando que su cuenta aún no se encuentra activa, y debe activarla antes de solicitar recuperar su contraseña.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.
+
+% \paragraph{Puntos de extensión} \label{SUB-M-CU1.1:P}
+% \begin{enumerate}[label=PE\arabic*.]
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.3]{SUB-M-CU1.1.3-Obtener insignia} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.4]{SUB-M-CU1.1.4-Asignar insignia a gasolinera} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% 	\item Caso de uso \hyperref[SUB-M-CU1.1.5]{SUB-M-CU1.1.5-Especificar bomba} en el paso \ref{SUB-M-CU1.1:Boton} de la Trayectoria principal.
+% \end{enumerate}

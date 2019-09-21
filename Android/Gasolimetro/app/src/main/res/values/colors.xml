@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="editTextColorWhite">#FFFFFF</color>
+    <color name="editTextColorBlack">#000000</color>
+    <color name="backgroundtext_card">#53292929</color>
+    <color name="color_card_view_automovil">#87DEAD</color>
+    <color name="color_card_view_sensor">#e6ffff</color>
+    <color name="backgroundtext_card_sensor">#82b3c9</color>
+</resources>

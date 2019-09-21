@@ -1,0 +1,69 @@
+\subsubsection{SUB-U-CU9.1-Liberar reporte}\label{SUB-U-CU9.1}
+Un administrador puede liberar un reporte que se haya generado cuando el problema haya sido resuelto o sea desestimado.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU9.1-Liberar reporte \\ \hline
+	\textbf{Objetivo} &
+		Permitir al actor liberar un reporte cuando sea necesario. \\ \hline
+	\textbf{Actores} &
+		Administrador. \\ \hline 
+	\textbf{Disparador} & 
+		El error indicado en el reporte ha sido resuelto o desestimado. \\ \hline 
+	\textbf{Entradas} & Reporte seleccionado.
+		% \begin{itemize}
+		% 		\item Cantidad de combustible cargada al automóvil.
+		% 		\item Fecha y hora de la carga.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & Mensaje de éxito.
+		% \begin{itemize}
+		% 	\item Cantidad de gasolina que debió ser cargada al automóvil.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		Debe existir al menos un reporte.\\ \hline
+	\textbf{Postcondiciones} & El reporte liberado no puede ser consultado de nuevo.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize}
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra el mensaje de éxito al actor.
+		% \begin{itemize} 
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona un reporte de la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte}.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu9.1]{SUB-U-IU9.1-Liberar reporte} con la información obtenida.
+		\item {[Actor]} Presiona el botón \textit{Liberar}.\hyperref[SUB-U-CU9.1:TA]{Trayectoria alternativa A}
+		\item {[Sistema]} Elimina el reporte seleccionado.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Trayectoria alternativa A} \label{SUB-U-CU9.1:TA}
+	El actor no requiere liberar el reporte.
+	\begin{enumerate}[label=A\arabic*.]
+		\item {[Actor]} Presiona el botón \textit{Cancelar}.
+		\item {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu9]{SUB-U-IU9-Consultar reporte}.
+	\end{enumerate}
+	Fin de la trayectoria alternativa.

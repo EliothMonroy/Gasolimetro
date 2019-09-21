@@ -1,0 +1,26 @@
+\subsection{Sensor}\label{sec:Sensor}
+Para la realización del presente trabajo, es necesario medir la cantidad de gasolina que es cargada a un automóvil. Para ello, es necesario usar un dispositivo capaz de medir cuanto liquido (en este caso la gasolina) esta siento cargada al mismo en un determinado tiempo. Este tipo de dispositivos, son conocidos como caudalímetros \cite{CAUDALIMETRO}.
+
+Un caudalímetro, es un instrumento que se usa para medir el caudal caudal de un fluido, existen diversos tipos, tales como caudalímetros mecánicos visuales, mecánicos de molino, electrónicos de molino, de turbina y de diferencial de presión. Todos ellos se diferencian por la forma en que funcionan internamente, sin embargo, el funcionamiento de estos es similar. Cada vez que el liquido pasa a través de ellos, estos liberan un pulso eléctrico, comúnmente equivalente al voltaje de la fuente con la que están siendo alimentados.
+
+En la Tabla \ref{tabla_caudalimetros}, se observa una comparativa entre distintos caudalímetros, los cuales fueron considerados como opciones para el desarrollo del presente trabajo.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|M{2cm}|M{2cm}|M{2cm}|M{2cm}|M{2cm}|M{1.7cm}|M{1.4cm}|}
+		\hline
+		\textbf{Nombre} & \textbf{Presión de agua} & \textbf{Flujo de entrada} & \textbf{Voltaje de funcionamiento} & \textbf{Tubo de entrada y salida} & \textbf{Salida de pulso de alta} & \textbf{Precio unitario (pesos)} \\ \hline
+		LG16 Liquid Flow Meter Series & 20MPa\cite{LG16} & 5000 ul/min & 3.5-12V & 1/16'' o 1/8'' & 4.8V & N/E \\ \hline
+		FS400A-G1 Flow Meter & 1.2 MPa\cite{FS400A-G1} & 1 a 60L/min & 5-24V & 1'' & $>$4.7V & \$348 \\ \hline
+		FMG800 Series & 1.03MPa\cite{FMG800} & 0.145 L/s hasta 42L/s & 10-30V & 1'', 2'' y 3'' & Depende de la unidad & \$28,110 \\ \hline
+		Optiflux 1000 & 4MPa - 12MPa\cite{OPTIFLUX} & N/E & N/E & 3/8'' - 6'' & N/E & \$25,719 \\ \hline
+	\end{tabular}
+	\caption{Comparación de caudalímetros}
+	\label{tabla_caudalimetros}
+\end{table}
+
+Un elemento importante por considerar para la elección del caudalímetro a usar, es la conexión que este requiere para poder ser conectado tanto al depósito de combustible de un automóvil como a la pistola despachadora de una gasolinera.
+
+No fue encontrado un estándar el cual indique el tamaño de la boquilla de las pistolas despachadoras de gasolina, pero tomando como referencia las medidas de las pistolas que se encuentran en venta en Internet\cite{PISTOLAS}, se estableció, que la medida estándar de la boquilla de las pistolas de despacho de gasolina, se encuentra entre 3/4'' y 1''.
+
+El sensor seleccionado para el desarrollo del trabajo, es el caudalímetro \textit{FS400A-G1}, debido a que se ajustan sus características y su precio a las necesidades de la aplicación. Considerando que tiene una boquilla de 1'', requiere de un voltaje de alimentación bajo (5v), y soporta una presión de hasta 1.2MPa, teniendo como referencia, que aproximadamente la presión de la bomba de gasolina es cercana a los 0.344MPa\cite{PISTOLA}.
+

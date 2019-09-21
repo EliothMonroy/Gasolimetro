@@ -1,0 +1,79 @@
+\subsubsection{SUB-C-CU2.1-Realizar recorrido}\label{SUB-C-CU2.1}
+El actor puede solicitar una ruta para llegar a la gasolinera seleccionada previamente, la ruta será mostrada en el mapa de la aplicación y será correspondiente a una ruta que pueda seguir un automóvil.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-C-CU2.1-Realizar recorrido \\ \hline
+	\textbf{Objetivo} &
+		Guiar al actor hasta una gasolinera que el haya seleccionado previamente. \\ \hline
+	\textbf{Actores} &
+		\begin{itemize}
+			\item Cliente.
+			\item Usuario no registrado.
+			\item Administrador.
+		\end{itemize}
+		 \\ \hline 
+	\textbf{Disparador} & 
+		El actor presiona el icono \textit{¿Cómo llegar?}. \\ \hline 
+	\textbf{Entradas} & 
+		\begin{itemize}
+				\item Gasolinera seleccionada.
+				\item Posición del usuario actual.
+		\end{itemize}\\ \hline 
+	\textbf{Salidas} & Ruta generada.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} &
+		\begin{itemize}
+			\item Deben existir gasolineras en el sistema.
+			\item Debe haber una gasolinera seleccionada, ya se automáticamente por el sistema o por el usuario.
+		\end{itemize} 
+		\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item Nin
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se le muestra al actor la ruta trazada en el mapa.
+		% \begin{itemize}
+		% 	\item 
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Media. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona el icono \textit{Realizar recorrido} en la pantalla \hyperref[fig:sub-c-iu2]{SUB-C-IU2-Consultar mapa}.
+		\item {[Sistema]} Obtiene la ubicación de la gasolinera seleccionada previamente.
+		\item {[Sistema]} Obtiene la ubicación actual del usuario.
+		\item {[Sistema]} Obtiene del API de Google Maps los puntos intermedios entre la ubicación de la gasolinera y la ubicación del usuario actual.
+		\item {[Sistema]} Crea la ruta con los puntos obtenidos en el paso anterior.
+		\item {[Sistema]} Muestra la ruta creada en la pantalla \hyperref[fig:sub-c-iu2.1]{SUB-C-IU2.1-Realizar recorrido}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

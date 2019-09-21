@@ -1,0 +1,36 @@
+\subsection{Submódulo Microcontrolador}
+El microcontrolador ATMega16 es uno de los dispositivos fundamentales del presente proyecto, debido a que en él se centrara el calculo de la frecuencia de la señal entregada por el sensor.
+Para realizar el calculo se utilizo el pin de interrupciones INT0, para obtener cada flanco de subida de la señal cuadrada, el cual se configura de la siguiente manera en el microcontrolador en codigo C.
+\begin{lstlisting}[language= C]
+void configurarPuertos(){
+// Se configuran los puertos a utilizar
+	cli(); // Deshabilita las interrupciones
+	DDRA = (1<<0); // Habilitamos el PIN0 del puerto A como salida
+	MCUCR |= (1<<ISC01) |(1<<ISC00); //INT0 flanco de subida
+	GICR |= (1<<INT0); // INT0 habilitada
+}
+\end{lstlisting}
+Posteriormente a habilitar el puerto de interrupciones del microcontrolador se realiza el calculo de la frecuencia de la señal, esto se hace por medio de la definición de frecuencia, la cual es: "La frecuencia es la cantidad de pulsos que se obtienen en un segundo".
+\newline
+El código que se encarga de hacer este calculo se muestra a continuación.
+\begin{lstlisting}[language= C]
+void obtenerFrecuencia(){
+	int8_t frecuencia;
+	numPulsos = 0;
+	//Va la parte del contador de interrupciones
+	sei();// Habilita las interrupciones
+	_delay_ms(1000); // Esperamos un segundo
+	cli();// detenemos las interrupciones
+	frecuencia = numPulsos; // HZ (Cantidad de pulsos por segundo)
+	//Enviamos los datos
+	usar_transmit(frecuencia);
+}
+
+//Codigo que se ejecuta en cada interrupcion
+ISR(INT0_vect){
+	numPulsos++;	
+	PORTA^=(1<<0);
+}
+\end{lstlisting}
+Cada valor obtenido es enviado por bluetooth al dispositivo móvil, en el cual se realiza el calculo del flujo de combustible.
+

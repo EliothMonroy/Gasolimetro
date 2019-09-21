@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_nav_header_top_spacing">2dp</dimen>
+    <dimen name="image_nav_header_top_spacing">40dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">150dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textview_nombre_usuario">22sp</dimen>
+    <dimen name="edittext_textsize_login">18sp</dimen>
+    <dimen name="padding_horizontal_login">32dp</dimen>
+    <dimen name="textsize_donthaveaccount">16sp</dimen>
+    <dimen name="edittext_margin_createaccount">10dp</dimen>
+    <dimen name="textview_accion">15sp</dimen>
+    <dimen name="max_tam_img">50dp</dimen>
+    <dimen name="textview_barra_inferior_nombre_gasolinera">16sp</dimen>
+    <dimen name="margen_derecho_nombre_gasolinera_barra_inferior">65dp</dimen>
+    <dimen name="margen_superior_nombre_gasolinera_barra_inferior">10dp</dimen>
+    <dimen name="margen_inferior_boton_navegacion">16dp</dimen>
+    <dimen name="margen_derecho_boton_navegacion">8dp</dimen>
+    <dimen name="textview_barra_inferior_rating_gasolinera">14sp</dimen>
+    <dimen name="margen_superior_rating_gasolinera_barra_inferior">1dp</dimen>
+    <dimen name="max_tam_star">400dp</dimen>
+    <dimen name="half_fab_margin">8dp</dimen>
+    <dimen name="margen_superior_elementos_gasolinera">18dp</dimen>
+    <dimen name="distancia_tiempo">12sp</dimen>
+    <dimen name="margin_left_tiempo">50dp</dimen>
+    <dimen name="text_size_insignia">14sp</dimen>
+    <dimen name="height_cardview">100dp</dimen>
+    <dimen name="cornerradius_cardview">4dp</dimen>
+    <dimen name="textsize_nombre_automovil">16sp</dimen>
+    <dimen name="textsize_marca_automovil">12sp</dimen>
+    <dimen name="margen_izquierdo_card_automovil">20dp</dimen>
+    <dimen name="double_fab_margin">32dp</dimen>
+    <dimen name="textsize_recuperar_contra">12sp</dimen>
+    <dimen name="four_fab_margin">64dp</dimen>
+    <dimen name="six_fab_margin">96dp</dimen>
+
+</resources>

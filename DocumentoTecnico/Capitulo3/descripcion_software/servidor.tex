@@ -1,0 +1,49 @@
+\subsection{Servidor}
+Un servidor es un ordenador u otro tipo de equipo informático encargado de suministrar información a una serie de clientes, que pueden ser tanto personas como otros dispositivos conectados a él. La información que puede transmitir es múltiple y variada: desde archivos de texto, imagen o vídeo y hasta programas informáticos, bases de datos, etc.
+\textbf{Cloud Server}
+Los cloud servers son unas alternativas para llevar la herramienta de los servidores al mundo virtual. La infraestructura en la nube se consigue gracias a la existencia de diversos servidores físicos controlados mediante un software, que es el encargado de virtualizar la plataforma.
+\\Los servidores en la nube ofrecen a las empresas la posibilidad de tener un servidor a medida de sus necesidades, cuyos recursos y capacidades puedan ir incrementándose a conforme aumentan el tamaño y la actividad de la empresa, lo que permite un considerable ahorro para el presupuesto de las distintas corporaciones \citep{servidores}.
+\\
+En la tabla \ref{tabla_servidores} se tiene la comparación entre distintos cloud servers.
+\begin{longtable}{|M{2.5cm}|M{4cm}|M{4.8cm}|M{3cm}|}
+	\hline 
+	\textbf{Cloud Server}& \textbf{Descripción} & \textbf{Características} & \textbf{Precio} \\ \hline
+	Google Cloud Platform & Es una plataforma que ha reunido todas las aplicaciones de desarrollo web de Google. Google Cloud Platform es utilizada para crear soluciones a través de la tecnología almacenadas en la nube. &\begin{itemize}
+		\item Permite la conexión por medio de SSH.
+		\item Puedes desplegar el código directamente o mediante contenedores.
+		\item Solo se paga por el tiempo utilizado.
+		\item Maquinas virtuales personalizadas.
+		\item Cuenta con un almacenamiento de hasta 624 GB por maquina.
+		\item Proporciona almacenamiento en bloques en unidades de estado solido locales con encriptado permanente.
+		\item Balanceo de carga global.
+		\item Sistemas operativos: Debian, CentOS, CoreOS, SUSE, Ubuntu, Red Hat, FreeBSD o Windows 2008 R2, 2012 R2 y 2016
+		\item Procesamiento por lotes.
+	\end{itemize} &  Aproximadamente 0.1900 USD/hora \\ \hline
+	Amazon Web Services & 
+	Es una plataforma de servicios de nube que ofrece potencia de cómputo, almacenamiento de bases de datos, entrega de contenido y otra funcionalidad para ayudar a las empresas a escalar y crecer.
+	&\begin{itemize}
+		\item Instancias dedicadas: brindan acceso directo al procesador y a la memoria del servidor.
+		\item Instancias de informática con GPU
+		\item Instancias de E/S de alto desempeño: Ofrecen un desempeño de disco secuencia de hasta 16 GB/s
+		\item Instancias de almacenamiento denso: Hasta 48 TB de almacenamiento.
+		\item Volúmenes de almacenamiento en bloques persistente, de alta disponibilidad, constantes y de baja latencia
+		\item Se paga por lo que se consuma
+		\item Posibilidad de colocar las instancias en distintas ubicaciones.
+		\item Auto Scaling
+		\item Amazon Time Sync Service ofrece un origen de hora de alta precisión, fiabilidad y disponibilidad para los servicios de AWS
+		\item Sistemas operativos: Amazon Linux, Windows Server 2012, CentOS 6.5, Debian.
+	\end{itemize} & Aproximadamente 0,0832 USD por hora \\ \hline
+	Heroku & Heroku es una plataforma en la nube basada en un sistema de contenedor administrado, con servicios de datos integrados y un poderoso ecosistema, para implementar y ejecutar aplicaciones modernas &\begin{itemize}
+		\item Ejecuta las aplicaciones dentro de dynos:contenedores inteligentes en un entorno de tiempo de ejecución confiable y administrado.
+		\item Soporta código escrito en Node, Ruby, Java, PHP, Pytho, Go, Scala y Clojure.
+		\item Se puede implementar desde herramientas como Git, Github o sistemas de integración continua.
+		\item Permite extender las aplicaciones con complementos.
+		\item Sistema para escalar automáticamente las web dynos.
+		\item Cuenta con métricas de la aplicación, alertas de umbral y escala automática.
+		\item Seguridad
+		\item Sistema operativo Linux
+	\end{itemize} & Aproximadamente 7 USD por dyno/mes \\ \hline
+	\caption{Tabla comparativa de cloud servers}
+	\label{tabla_servidores}
+\end{longtable}
+El servicio a utilizar sera Google Cloud Platform debido a que conforme va creciendo el sistema nos ofrece el menor precio, ademas de que nos permite tener una conexión por medio de SSH y asimismo soporta el lenguaje que será utilizado para el desarrollo de la aplicación.

@@ -1,0 +1,65 @@
+\subsubsection{SUB-U-CU1.1-Verificar cuenta}\label{SUB-U-CU1.1}
+Después de que un Usuario no registrado haya completado su proceso de registro, deberá verificar su cuenta.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU1.1-Verificar cuenta \\ \hline
+	\textbf{Objetivo} &
+		Solicitar al Usuario no registrado que verifique su cuenta para que este pueda iniciar sesión en el sistema. \\ \hline
+	\textbf{Actores} &
+		Usuario no registrado. \\ \hline 
+	\textbf{Disparador} & 
+		El actor presiona el link enviado por correo electrónico. \\ \hline 
+	\textbf{Entradas} & Ninguna.
+		% \begin{itemize}
+		% 		\item Cantidad de combustible cargada al automóvil.
+		% 		\item Fecha y hora de la carga.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Mensaje de éxito.
+		\end{itemize} \\ \hline
+	\textbf{Precondiciones} &
+		El actor tiene que haber completado el formulario de registro.\\ \hline
+	\textbf{Postcondiciones} &
+		\begin{itemize}
+			\item El actor puede iniciar sesión en el sistema.
+		\end{itemize} \\ \hline
+	\textbf{Condiciones de término} & 
+		\begin{itemize}
+			\item Se le notifica al actor que su cuenta ha sido verificada exitosamente.
+		\end{itemize} \\ \hline 
+	\textbf{Prioridad} & 
+		Media. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Presiona el link enviado a su correo electrónico.
+		\item {[Sistema]} Cambia la cuenta asociada al link como activa.
+		\item {[Sistema]} Muestra un mensaje de éxito como se observa en la pantalla \hyperref[fig:sub-u-iu1.1]{SUB-U-IU1.1-Verificar cuenta}.
+	\end{enumerate}
+	Fin del caso de uso.
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.

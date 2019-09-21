@@ -1,0 +1,18 @@
+\subsection{Factibilidad técnica}
+La factibilidad técnica de un proyecto estudia si el equipo y software existentes tienen las capacidades técnicas requeridas para que el proyecto resulte viable\cite{factibilidad_tecnica}.
+
+En la Tabla \ref{tabla_factibilidad_tecnica}, se muestran los diferentes aspectos analizados para el desarrollo del presente trabajo.
+
+\begin{longtable}{|M{3cm}|M{4cm}|M{2.5cm}|M{3cm}|M{1.5cm}|}
+	\hline
+	\textbf{Problemática} & \textbf{Solución propuesta} & \textbf{Tiempo de desarrollo} & \textbf{Precio estimado} & \textbf{¿Resulta factible?} \\ \hline
+	Necesidad de medir la cantidad de combustible& Uso de un caudalímetro (véase la sección \ref{sec:Sensor}) & No aplica, se adquiere desarrollado & Aproximadamente \$500 & Si\\\hline
+	Necesidad de enviar las mediciones registradas por el sensor & Uso de un microcontrolador (véase la sección \ref{sec:micro}) & No aplica, se adquiere desarrollado & Aproximadamente \$200 & Si\\\hline
+	Enviar las mediciones registradas a un dispositivo móvil inalambricamente & Uso de módulo Bluetooth (véase la sección \ref{sec:bluetooth}) & N/A, se adquiere desarrollado & Aproximadamente \$100 & Si \\\hline
+	Desarrollar un aplicación para un dispositivo móvil Android & Usar el lenguaje de programación Java y el IDE Android Studio para el desarrollo de un aplicación compatible con teléfonos Android 5+& 6 meses & No aplica, tanto el uso de Java como de Android Studio es gratuito & Si \\ \hline
+	Desarrollar un servidor web al cual pueda conectarse la aplicación móvil & Usar el framework web Java Spring 4 y el IDE Eclipse para el desarrollo& 6 meses & No aplica, Spring 4 y Eclipse son gratuitos & Si \\ \hline
+	Desplegar el servidor web sobre un servicio de cloud computing  & Usar un servicio de cloud computing como Google Cloud & 1 mes & Aproximadamente \$1000/año & Si \\ \hline
+	Programar el microcontrolador para recibir y enviar las mediciones & Usar lenguaje C y Atmel Studio para programar el microcontrolador & 3 meses & N/A, Atmel Studio es gratuito & Si \\ \hline
+	\caption{Factibilidad técnica}
+	\label{tabla_factibilidad_tecnica} 
+\end{longtable}

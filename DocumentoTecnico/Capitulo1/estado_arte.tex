@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           Estado del arte                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estado del arte}
+El problema de la exactitud al momento de suministrar combustible en una gasolinera ya ha sido abordado anteriormente por diversas instituciones tanto públicas como privadas.\\
+
+Actualmente, existen 3 proyectos que tienen una funcionalidad similar a la propuesta en el presente Trabajo Terminal:
+\begin{itemize}
+	\item Full Me
+	\item Zenzzer
+\end{itemize}
+
+La Tabla \ref{tabla_estado_arte} muestra un resumen de las características y precio de los sistemas mencionados.
+\begin{longtable}{|M{1.7cm}|M{4cm}|M{4.2cm}|M{1.6cm}|M{2.3cm}|}
+	\hline
+	\textbf{Producto o sistema} & \textbf{Descripción} & \textbf{Características} & \textbf{Precio}& \textbf{Estado actual}  \\ \hline
+	Full Me & Dispositivo electrónico que mide el flujo de combustible entrante en un tanque de gasolina de un automóvil, los resultados de la medición se pueden consultar mediante una aplicación móvil y la misma permite compartir los resultados en redes sociales. & 
+	%Caracteristicas
+	\begin{itemize}
+		\item Dispositivo electromecánico de medición de flujo
+		\item Interfaz de comunicación bluetooth
+		\item Aplicación Android
+		\item Compartes el resultado de la medición en redes sociales
+		\item Sensor: Dispositivo cilíndrico de 12 cm de largo
+	\end{itemize}
+	& Sin información
+	& Desarrollado como un prototipo de emprendimiento, no se encuentra en venta actualmente. \\ \hline
+	Zenzzer & Aplicación móvil que funciona como una red social para automovilistas, donde los mismos pueden consultar y compartir información sobre las gasolineras que visitan. La información es desplegada a los usuarios en un mapa interactivo. Además de la aplicación, es posible comprar un dispositivo llamado ZenzMetter el cual se conecta a la computadora del automóvil para obtener información sobre el mismo, la cual es mostrada en una aplicación móvil.
+	&
+	\begin{itemize}
+		\item Aplicación móvil disponible para Android 5.0 y posteriores
+		\item Conexión al puerto OBD2 del automóvil
+		\item Clasificación de las gasolineras por medio del precio de la gasolina
+		\item Permite visualizar en la aplicación la cantidad de litros cargados en tiempo real
+		\item Permite dejar comentarios de las gasolineras visitadas
+		\item Compatible con solo 20 modelos de vehículos
+	\end{itemize}
+	& Aplicación móvil: Gratuita. ZenzMetter: 1000 pesos.
+	& La empresa sigue en el mercado actualmente aunque solo es posible descargar la aplicación. El sensor ya no esta a la venta.
+	\\ \hline
+	Propuesta de sistema para medición de volumen de gasolina vía bluetooth &
+	El trabajo consta de un sensor de flujo que recauda la información en bruto del flujo de gasolina que pasa, una placa “Arduino Uno” que procesa los datos para enviarlos a el modulo Bluetooth y una aplicación Android, la cual muestra la información de la medición.
+	&
+	\begin{itemize}
+	\item Sensor de flujo modelo YF-S201
+	\item Aplicación móvil disponible para Android.
+	\item Módulo Bluetooth ZS-040
+	\item Microcontrolador Arduino Uno
+	\item Muestra los datos del volumen leído por el sensor en la aplicación Android
+	\end{itemize}
+	&
+	320 pesos
+	&
+	Solo fue desarrollado como un proyecto de académico en el año 2016.
+	\\ \hline
+	Trabajo Terminal 2018-A041 (Solución Propuesta) & Aplicación móvil que muestre la clasificación de gasolineras elaborada mediante la información obtenida de un sensor conectado al tanque de gasolina de un automóvil, esta clasificación se muestra en un mapa el cual se ajusta a la ubicación del usuario para así solo mostrar las gasolineras que se encuentren cercanas a él. 
+	&%Caracteristicas
+	\begin{itemize}
+		\item Aplicación móvil disponible para Android 5.0 y versiones posteriores
+		\item Mapa interactivo que muestra las gasolineras mejor calificadas según la precisión de carga de combustible.
+		\item Sensor de flujo de gasolina modelo FS400A-G.
+		\item Visualización de la cantidad de combustible cargado en la aplicación.
+		\item Uso de geolocalización para mostrar las gasolineras mejor calificadas cerca de la ubicación del usuario.
+	\end{itemize}
+	& Sensor: 700 pesos. Aplicación móvil: Gratuita.&
+	Actualmente se encuentra en desarrollo. \\ \hline
+	\caption{Estado del arte}
+	\label{tabla_estado_arte}
+\end{longtable}

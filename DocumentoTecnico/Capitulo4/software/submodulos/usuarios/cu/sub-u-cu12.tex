@@ -1,0 +1,84 @@
+\subsubsection{SUB-U-CU12-Consultar automóvil}\label{SUB-U-CU12}
+El Cliente que tenga automóviles registrados puede consultar la información de los mismos.
+
+\begin{longtable}{|J{5cm}|J{10.3cm}|}
+	\hline
+	\textbf{Nombre del caso de uso} &
+		SUB-U-CU12-Consultar automóvil \\ \hline
+	\textbf{Objetivo} &
+		Permitir a un Cliente consultar la información de un automóvil. \\ \hline
+	\textbf{Actores} &
+		Cliente \\ \hline 
+	\textbf{Disparador} & 
+		El actor requiere consultar la información un automóvil o las mediciones hechas por el mismo. \\ \hline 
+	\textbf{Entradas} & Automóvil seleccionado.
+		% \begin{itemize}
+		% 		\item Nombre del automóvil.
+		% 		\item Modelo del automóvil.
+		% 		\item Marca del automóvil.
+		% 		\item Sensor usado en el automóvil.
+		% \end{itemize}
+		\\ \hline 
+	\textbf{Salidas} & 
+		\begin{itemize}
+			\item Información del automóvil seleccionado.
+			\item Mediciones hechas en el automóvil.
+		\end{itemize} 
+		\\ \hline
+	\textbf{Precondiciones} & El actor tiene registrado al menos un automóvil.
+		\\ \hline
+	\textbf{Postcondiciones} & Ninguna.
+		% \begin{itemize}
+		% 	\item El actor puede verificar su cuenta.
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Condiciones de término} & Se muestra la información obtenida al actor.
+		% \begin{itemize}
+		% 	\item Se muestra el mensaje de éxito al actor.
+		% \end{itemize} 
+		\\ \hline 
+	\textbf{Prioridad} & 
+		Baja. \\ \hline
+	\textbf{Errores} & Ninguno.
+		% \begin{itemize}
+		% 	\item \label{SUB-M-CU1:Error1} Error 1: .
+		% \end{itemize} 
+		\\ \hline
+	\textbf{Reglas de negocio} & Ninguna.
+		% \begin{itemize}
+		% 	\item \ref{RN1}.
+		% \end{itemize}
+		 \\ \hline
+	% \caption{}
+	%\label{desc:SUB-M-CU1}
+\end{longtable}
+
+\paragraph{Trayectoria principal}
+	\begin{enumerate}
+		\item {[Actor]} Selecciona la opción \textit{Automóviles} del menú \hyperref[fig:menu-cliente]{Menú para Cliente}.
+		\item {[Sistema]} Obtiene los automóviles registrados por el actor.
+		\item {[Actor]} Selecciona un automóvil.
+		\item {[Sistema]} Obtiene los sensores registrados por el actor así como las mediciones del mismo.
+		\item {[Sistema]} Obtiene la información del automóvil seleccionado.
+		\item \label{SUB-U-CU12:Pantalla} {[Sistema]} Muestra la pantalla \hyperref[fig:sub-u-iu12]{SUB-U-IU12-Consultar automóvil} con la información obtenida.
+	\end{enumerate}
+	Fin del caso de uso.
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU12:P1}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU11]{SUB-U-CU11-Editar automóvil} en el paso \ref{SUB-U-CU12:Pantalla} de la Trayectoria principal.
+\end{enumerate}
+
+\paragraph{Puntos de extensión} \label{SUB-U-CU12:P2}
+\begin{enumerate}[label=PE\arabic*.]
+	\item Caso de uso \hyperref[SUB-U-CU13]{SUB-U-CU13-Eliminar automóvil} en el paso \ref{SUB-U-CU12:Pantalla} de la Trayectoria principal.
+\end{enumerate}
+
+% \paragraph{Trayectoria alternativa A} \label{SUB-M-CU1.1:TA}
+% 	El actor no se encuentra usando la aplicación móvil.
+% 	\begin{enumerate}[label=A\arabic*.]
+% 		\item {[Sistema]} Muestra una notificación al actor como la que se observa en la pantalla \hyperref[fig:sub-m-iu1.1.a]{SUB-M-IU1.1-Confirmar medición (a)}.
+% 		\item {[Actor]} Presiona la notificación.
+% 		\item {[Sistema]} Continúa en el paso \ref{SUB-M-CU1.1:Pantalla} de la Trayectoria Principal.
+% 	\end{enumerate}
+% 	Fin de la trayectoria alternativa.
