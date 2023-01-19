@@ -448,8 +448,8 @@
 
 
     	% Tipo de trabajo
-	    \makebox[6cm][s]{\huge Trabajo Terminal}\\[6pt]
-	    2018-A041\\[5pt]
+	    \makebox[6cm][s]{\huge Trabajo de titulación}\\[6pt]
+	    Que para cumplir con la opción de titulación curricular en la carrera de:\\[5pt]
     	\textbf{{\@degree}}\\[30pt]
 
 	    % Título del trabajo

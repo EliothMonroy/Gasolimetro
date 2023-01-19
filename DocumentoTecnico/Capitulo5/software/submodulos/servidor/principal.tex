@@ -1,7 +1,7 @@
 \subsection{Desarrollo de servidor web}
 
 \paragraph{Introducción}
-Este sección tiene como objetivo mostrar los puntos clave en el desarrollo de un servidor con una Arquitectura de Orientada a Microservicios, dicho servidor fué utilizado en el presente trabajo para realizar las tareas de comunicación con una Aplicación Móvil, ejecución de algoritmos de ordenamiento y la conexión con un SGBD el cuál persistirá toda la información generada por el sistema. \\
+Este sección tiene como objetivo mostrar los puntos clave en el desarrollo de un servidor con una Arquitectura de Orientada a Microservicios, dicho servidor fue utilizado en el presente trabajo para realizar las tareas de comunicación con una Aplicación Móvil, ejecución de algoritmos de ordenamiento y la conexión con un SGBD el cuál persistirá toda la información generada por el sistema. \\
 
 A continuación, se mencionarán los componentes más importantes de dicha arquitectura así como las tecnologías que se utilizaron para implementar estos componentes, se dará un breve ejemplo de código y finalmente se mostrarán algunos de los resultados que se obtuvieron. \\
 
@@ -9,7 +9,7 @@ A continuación, se mencionarán los componentes más importantes de dicha arqui
 Una Arquitectura de Microservicios posee ciertas características que deben de ser cumplidas para garantizar el correcto funcionamiento del sistema, cada una de estas características permite cumplir con un objetivo, a continuación se hace una lista de las características principales que se desea tenga una arquitectura básica:
 
 \begin{itemize}
-	\item \textbf{Bounded Context:} Es la acción de dividir nuestro sistema en diferentes servicios, cada uno de estos deberá tener la granularidad correcta y además debberán ser expuestos al exterior (normalmente a través de un Web services) además, dichos podrán comunicarse entre sí.
+	\item \textbf{Bounded Context:} Es la acción de dividir nuestro sistema en diferentes servicios, cada uno de estos deberá tener la granularidad correcta y además deberán ser expuestos al exterior (normalmente a través de un Web services) además, dichos podrán comunicarse entre sí.
 	\item \textbf{Configuration Management:} Permite almacenar todas las configuraciones necesarias para los servidores en un repositorio centralizado, de manera tal, que estas configuraciones puedan ser expuestas y consultadas por nuestros microservicios, esto permite un mejor mantenimiento de las configuraciones del sistema.
 	\item \textbf{Dynamic Scale Up/Down:} Esta característica permite realizar dos operaciones de suma importancia dentro de esta arquitectura como lo son:
 	\begin{itemize}
@@ -22,7 +22,7 @@ Una Arquitectura de Microservicios posee ciertas características que deben de s
 \end{itemize}
 
 
-\paragraph{Componentes de una Arquitetura Orientada a Microservicios}
+\paragraph{Componentes de una Arquitectura Orientada a Microservicios}
 Para poder cumplir con las características antes mencionadas es necesario implementar un conjunto de componentes (cada uno de estos hace uso de una tecnología en específico) dentro de nuestra arquitectura, a continuación se listan los componentes que fueron utilizados para este trabajo:
 
 \begin{itemize}

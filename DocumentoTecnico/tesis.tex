@@ -70,7 +70,7 @@
 % The \blindtext or \Blindtext commands throughout this template generate dummy text
 % to fill the template out. These commands should all be removed when 
 % writing thesis content.
-\include{Latex/Macros/MacroFile1}           % Archivo con funciones útiles
+\include{DocumentoTecnico/Latex/Macros/MacroFile1}           % Archivo con funciones útiles
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,7 +84,7 @@
 \degree{Ingeniería en Sistemas Computacionales}       % Carrera
 \director{M. en C. Axel Ernesto Moreno Cervantes \quad \quad \quad Dr. Rubén Ortega González}     % Directores de tesis
 %\tutor{Nombre  Tutor }                    % Tutor de tesis, si aplica
-\degreedate{6 de Junio del 2019}            % Año de la fecha de la presentación
+\degreedate{26 de enero de 2023}            % Año de la fecha de la presentación
 \lugar{Ciudad de México}                        % Lugar
 
 %\portadafalse                              % Portada en NEGRO, descomentar y comentar la línea siguiente si se quiere utilizar
@@ -147,23 +147,23 @@
 % the main text starts here with the introduction, 1st chapter,...
 \mainmatter
 \def\baselinestretch{1.5}                   % Interlineado de 1.5
-\input{Capitulo1/descripcion_documento}
-\include{Capitulo1/introduccion}
-\include{Capitulo2/marco_teorico}
-\include{Capitulo3/analisis_sistema}
-\include{Capitulo4/diseno_sistema}
-\include{Capitulo5/desarrollo}
-\include{Capitulo6/pruebas}
-\include{Capitulo7/conclusiones}
-\include{Extras/trabajo_futuro}
-\include{Extras/glosario}
+\input{DocumentoTecnico/Capitulo1/descripcion_documento}
+\include{DocumentoTecnico/Capitulo1/introduccion}
+\include{DocumentoTecnico/Capitulo2/marco_teorico}
+\include{DocumentoTecnico/Capitulo3/analisis_sistema}
+\include{DocumentoTecnico/Capitulo4/diseno_sistema}
+\include{DocumentoTecnico/Capitulo5/desarrollo}
+\include{DocumentoTecnico/Capitulo6/pruebas}
+\include{DocumentoTecnico/Capitulo7/conclusiones}
+\include{DocumentoTecnico/Extras/trabajo_futuro}
+\include{DocumentoTecnico/Extras/glosario}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                   APÉNDICES                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\include{Apendice1/Apendice1}               % Colocar los circuitos, manuales, código fuente, pruebas de teoremas, etc.
+\include{DocumentoTecnico/Apendice1/Apendice1}               % Colocar los circuitos, manuales, código fuente, pruebas de teoremas, etc.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                   REFERENCIAS                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -176,7 +176,7 @@
 %\bibliographystyle{Latex/Classes/PhDbiblio-url} % bold + www link if provided
 %\bibliographystyle{Latex/Classes/jmb} % calls style file jmb.bst
 
-\bibliography{Bibliografia/referencias}             % Archivo .bib
+\bibliography{DocumentoTecnico/Bibliografia/referencias}             % Archivo .bib
 
 
 \end{document}
